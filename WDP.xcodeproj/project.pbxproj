@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		4401E3AE2628FA2C0049E591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4401E3AC2628FA2C0049E591 /* LaunchScreen.storyboard */; };
 		4401E3BA262965E60049E591 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3B9262965E60049E591 /* LoginViewController.swift */; };
 		4401E3BC262F64020049E591 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4401E3BB262F64010049E591 /* GoogleService-Info.plist */; };
+		4401E3BE2630B0600049E591 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3BD2630B0600049E591 /* SignUpViewController.swift */; };
+		4401E3C02630B0BF0049E591 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3BF2630B0BF0049E591 /* HomeViewController.swift */; };
+		4401E3C22630B2550049E591 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3C12630B2550049E591 /* AdminViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		4401E3AF2628FA2C0049E591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4401E3B9262965E60049E591 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4401E3BB262F64010049E591 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4401E3BD2630B0600049E591 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4401E3BF2630B0BF0049E591 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4401E3C12630B2550049E591 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				4401E3B9262965E60049E591 /* LoginViewController.swift */,
+				4401E3BD2630B0600049E591 /* SignUpViewController.swift */,
+				4401E3BF2630B0BF0049E591 /* HomeViewController.swift */,
+				4401E3C12630B2550049E591 /* AdminViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,7 +135,6 @@
 				16BC1F07FD6A5DD283843A65 /* Pods-WDP.debug.xcconfig */,
 				2BF30603E1F2BE058047BAF9 /* Pods-WDP.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -250,6 +258,9 @@
 				4401E3A62628FA2B0049E591 /* ViewController.swift in Sources */,
 				4401E3A22628FA2B0049E591 /* AppDelegate.swift in Sources */,
 				4401E3A42628FA2B0049E591 /* SceneDelegate.swift in Sources */,
+				4401E3C22630B2550049E591 /* AdminViewController.swift in Sources */,
+				4401E3BE2630B0600049E591 /* SignUpViewController.swift in Sources */,
+				4401E3C02630B0BF0049E591 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
