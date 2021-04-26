@@ -9,14 +9,28 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
+     // MARK: - Properties
+    
+   
+    
+    
+    
+    
+    
+    // MARK: - Lifecycale
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    // MARK: - Selectors
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
