@@ -10,21 +10,36 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    // MARK: - Properties
+
+    
+    
+    
+    @IBOutlet weak var EmalTextField: UITextField!
+    
+    
+    @IBOutlet weak var PasswordTextField: UITextField!
+    
+    @IBOutlet weak var SignInButton: UIButton!
+    
+    @IBOutlet weak var NeedAccButton: UIButton!
+    
+    // MARK: - Lifecycale
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        setupUI()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Functions
+    
+    func setupUI()   {
+        Utilities.filledButton(button: SignInButton)
+         Utilities.filledButton(button: NeedAccButton)
     }
-    */
 
 }
