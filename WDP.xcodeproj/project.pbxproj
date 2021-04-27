@@ -20,6 +20,7 @@
 		4401E3C02630B0BF0049E591 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3BF2630B0BF0049E591 /* HomeViewController.swift */; };
 		4401E3C22630B2550049E591 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3C12630B2550049E591 /* AdminViewController.swift */; };
 		4401E3C42636CDCF0049E591 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3C32636CDCF0049E591 /* Utilities.swift */; };
+		4401E3C9263796020049E591 /* AddDiseaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3C8263796020049E591 /* AddDiseaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		4401E3BF2630B0BF0049E591 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4401E3C12630B2550049E591 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		4401E3C32636CDCF0049E591 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		4401E3C8263796020049E591 /* AddDiseaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiseaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		4401E3B52628FACE0049E591 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4401E3C7263795B60049E591 /* Admin */,
 				4401E3B9262965E60049E591 /* LoginViewController.swift */,
 				4401E3BD2630B0600049E591 /* SignUpViewController.swift */,
 				4401E3BF2630B0BF0049E591 /* HomeViewController.swift */,
@@ -130,6 +133,14 @@
 				4401E3C32636CDCF0049E591 /* Utilities.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		4401E3C7263795B60049E591 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				4401E3C8263796020049E591 /* AddDiseaseViewController.swift */,
+			);
+			path = Admin;
 			sourceTree = "<group>";
 		};
 		B8E71EB126A4BD821840974E /* Pods */ = {
@@ -259,6 +270,7 @@
 			files = (
 				4401E3BA262965E60049E591 /* LoginViewController.swift in Sources */,
 				4401E3A62628FA2B0049E591 /* ViewController.swift in Sources */,
+				4401E3C9263796020049E591 /* AddDiseaseViewController.swift in Sources */,
 				4401E3A22628FA2B0049E591 /* AppDelegate.swift in Sources */,
 				4401E3A42628FA2B0049E591 /* SceneDelegate.swift in Sources */,
 				4401E3C22630B2550049E591 /* AdminViewController.swift in Sources */,

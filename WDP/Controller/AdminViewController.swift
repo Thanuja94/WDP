@@ -9,22 +9,42 @@
 import UIKit
 
 class AdminViewController: UIViewController {
+    
+    
+    // MARK: - Properties
+    
+    @IBOutlet weak var LoggedAsAdminLabel: UILabel!
+    
+    
+    @IBOutlet weak var ManageUsersButton: UIButton!
+    
+    
+    @IBOutlet weak var AddDiseaseButton: UIButton!
+    
+    
+    @IBOutlet weak var EditDiseaseButton: UIButton!
+    
+    
+    @IBOutlet weak var ViewHomePageButton: UIButton!
+    
+    // MARK: - Lifecycale
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupUI()
     }
     
+    // MARK: - Functions
 
-    /*
-    // MARK: - Navigation
+   func setupUI()   {
+            Utilities.filledButton(button: ManageUsersButton)
+            Utilities.filledButton(button: AddDiseaseButton)
+            Utilities.filledButton(button: EditDiseaseButton)
+            Utilities.filledButton(button: ViewHomePageButton)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+      }
 
 }
