@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y2I-VP-CCg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uRS-ns-scb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -327,16 +327,95 @@
             </objects>
             <point key="canvasLocation" x="2371.0144927536235" y="-110.49107142857143"/>
         </scene>
-        <!--View Controller-->
+        <!--Disease Info View Controller-->
         <scene sceneID="j4L-IV-w6x">
             <objects>
-                <viewController id="uRS-ns-scb" sceneMemberID="viewController">
+                <viewController id="uRS-ns-scb" customClass="DiseaseInfoViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X05-AG-6Ef">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Norml_backgr" translatesAutoresizingMaskIntoConstraints="NO" id="XlZ-zV-6h3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Common Cold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQZ-F2-N3F">
+                                <rect key="frame" x="40" y="144" width="334" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mG4-Ty-6BP">
+                                <rect key="frame" x="250" y="84" width="119" height="36"/>
+                                <color key="backgroundColor" red="0.31764705879999999" green="0.5450980392" blue="0.42745098040000001" alpha="0.84594392119999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Rate">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="W93-JL-v18">
+                                <rect key="frame" x="40" y="210" width="334" height="359.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symptoms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qe-dS-we6">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="pRe-Iw-Hte">
+                                        <rect key="frame" x="0.0" y="39" width="334" height="135"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="8cm-wb-eSX"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precautions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCK-V2-bI3">
+                                        <rect key="frame" x="0.0" y="189" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="s46-Vx-z7H">
+                                        <rect key="frame" x="0.0" y="224.5" width="334" height="135"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="LrQ-ho-nfK"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XlZ-zV-6h3" firstAttribute="leading" secondItem="TJG-F0-wQa" secondAttribute="leading" id="89Y-lY-Ias"/>
+                            <constraint firstItem="TJG-F0-wQa" firstAttribute="trailing" secondItem="IQZ-F2-N3F" secondAttribute="trailing" constant="40" id="HVh-d8-44B"/>
+                            <constraint firstItem="IQZ-F2-N3F" firstAttribute="top" secondItem="TJG-F0-wQa" secondAttribute="top" constant="100" id="JD6-ZB-BoI"/>
+                            <constraint firstItem="TJG-F0-wQa" firstAttribute="bottom" secondItem="XlZ-zV-6h3" secondAttribute="bottom" id="K5l-Es-2bN"/>
+                            <constraint firstItem="TJG-F0-wQa" firstAttribute="trailing" secondItem="mG4-Ty-6BP" secondAttribute="trailing" constant="45" id="KUQ-7a-1g4"/>
+                            <constraint firstItem="W93-JL-v18" firstAttribute="top" secondItem="IQZ-F2-N3F" secondAttribute="bottom" constant="30" id="LfA-qL-CUJ"/>
+                            <constraint firstItem="IQZ-F2-N3F" firstAttribute="leading" secondItem="TJG-F0-wQa" secondAttribute="leading" constant="40" id="PeW-Jo-3Kn"/>
+                            <constraint firstItem="mG4-Ty-6BP" firstAttribute="top" secondItem="TJG-F0-wQa" secondAttribute="top" constant="40" id="VUn-8D-zoY"/>
+                            <constraint firstItem="TJG-F0-wQa" firstAttribute="trailing" secondItem="W93-JL-v18" secondAttribute="trailing" constant="40" id="X0D-BX-ll0"/>
+                            <constraint firstItem="XlZ-zV-6h3" firstAttribute="top" secondItem="TJG-F0-wQa" secondAttribute="top" id="hd9-7i-tLJ"/>
+                            <constraint firstItem="TJG-F0-wQa" firstAttribute="trailing" secondItem="XlZ-zV-6h3" secondAttribute="trailing" id="iZ2-7R-Dxb"/>
+                            <constraint firstItem="W93-JL-v18" firstAttribute="leading" secondItem="TJG-F0-wQa" secondAttribute="leading" constant="40" id="oSL-0p-Fpk"/>
+                            <constraint firstItem="mG4-Ty-6BP" firstAttribute="leading" secondItem="TJG-F0-wQa" secondAttribute="leading" constant="250" id="w7a-YQ-kft"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TJG-F0-wQa"/>
                     </view>
+                    <connections>
+                        <outlet property="Diseaselabel" destination="IQZ-F2-N3F" id="Grq-hC-8VE"/>
+                        <outlet property="PrecautionLabel" destination="XCK-V2-bI3" id="uSi-ss-Dd2"/>
+                        <outlet property="PrecautionTextView" destination="s46-Vx-z7H" id="gxY-7w-RCi"/>
+                        <outlet property="RateButton" destination="mG4-Ty-6BP" id="eT0-Yx-D4B"/>
+                        <outlet property="SymptomsLabel" destination="8Qe-dS-we6" id="lad-dJ-KOF"/>
+                        <outlet property="SymptomsTextView" destination="pRe-Iw-Hte" id="KGg-jp-jme"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nkk-zs-u4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,7 +455,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rgz-wA-6qX">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Rgz-wA-6qX">
                                         <rect key="frame" x="0.0" y="105.5" width="334" height="130"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -393,7 +472,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Okv-vO-E3s">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Okv-vO-E3s">
                                         <rect key="frame" x="0.0" y="296" width="334" height="130"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -490,7 +569,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9V3-2c-xP6">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="9V3-2c-xP6">
                                         <rect key="frame" x="0.0" y="146" width="334" height="130"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -507,7 +586,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lXS-IT-QbE">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="lXS-IT-QbE">
                                         <rect key="frame" x="0.0" y="336.5" width="334" height="130"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
