@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c7y-QA-KGh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sNX-3q-ADI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -254,6 +254,44 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eca-QH-sSV">
                                 <rect key="frame" x="40" y="319" width="334" height="343"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-LT-bIl">
+                                <rect key="frame" x="329" y="94" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HOG-Xz-CL6"/>
+                                    <constraint firstAttribute="width" constant="40" id="ln8-Wp-9ma"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <state key="normal" image="person.fill" catalog="system"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4Nc-vR-a7V">
+                                <rect key="frame" x="40" y="707" width="334" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGK-BI-XoC">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <color key="backgroundColor" red="0.31764705879999999" green="0.5450980392" blue="0.42745098040000001" alpha="0.84594392119999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qP1-sS-yZT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Check">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAx-io-wCj">
+                                        <rect key="frame" x="0.0" y="60" width="334" height="40"/>
+                                        <color key="backgroundColor" red="0.31764705879999999" green="0.5450980392" blue="0.42745098040000001" alpha="0.84594392119999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="OHi-cm-xha"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Disease Library">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -262,17 +300,27 @@
                             <constraint firstItem="pjp-Au-a7U" firstAttribute="trailing" secondItem="k3V-Ay-BIU" secondAttribute="trailing" constant="40" id="AO3-If-Ppw"/>
                             <constraint firstItem="eca-QH-sSV" firstAttribute="leading" secondItem="pjp-Au-a7U" secondAttribute="leading" constant="40" id="Cth-wp-8lk"/>
                             <constraint firstItem="k3V-Ay-BIU" firstAttribute="top" secondItem="pjp-Au-a7U" secondAttribute="top" constant="100" id="Ocw-ln-Blk"/>
+                            <constraint firstItem="4Nc-vR-a7V" firstAttribute="leading" secondItem="pjp-Au-a7U" secondAttribute="leading" constant="40" id="Wjg-w9-90I"/>
+                            <constraint firstItem="pjp-Au-a7U" firstAttribute="trailing" secondItem="dsc-LT-bIl" secondAttribute="trailing" constant="45" id="ZV4-f2-lfa"/>
+                            <constraint firstItem="dsc-LT-bIl" firstAttribute="top" secondItem="pjp-Au-a7U" secondAttribute="top" constant="50" id="aHU-5K-Quv"/>
                             <constraint firstItem="pjp-Au-a7U" firstAttribute="trailing" secondItem="eca-QH-sSV" secondAttribute="trailing" constant="40" id="b4j-Ta-ckx"/>
                             <constraint firstItem="pjp-Au-a7U" firstAttribute="trailing" secondItem="Rxw-gu-q92" secondAttribute="trailing" id="b7Q-8G-2Q2"/>
                             <constraint firstItem="Rxw-gu-q92" firstAttribute="top" secondItem="pjp-Au-a7U" secondAttribute="top" id="bM1-Kz-db4"/>
                             <constraint firstItem="pjp-Au-a7U" firstAttribute="bottom" secondItem="eca-QH-sSV" secondAttribute="bottom" constant="200" id="mHu-MW-pxp"/>
                             <constraint firstItem="k3V-Ay-BIU" firstAttribute="leading" secondItem="pjp-Au-a7U" secondAttribute="leading" constant="40" id="mvi-Qk-gde"/>
+                            <constraint firstItem="pjp-Au-a7U" firstAttribute="trailing" secondItem="4Nc-vR-a7V" secondAttribute="trailing" constant="40" id="q3l-gw-e7k"/>
                             <constraint firstItem="eca-QH-sSV" firstAttribute="top" secondItem="k3V-Ay-BIU" secondAttribute="bottom" constant="60" id="vtf-jp-6IF"/>
+                            <constraint firstItem="4Nc-vR-a7V" firstAttribute="top" secondItem="eca-QH-sSV" secondAttribute="bottom" constant="45" id="wan-hL-NgG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pjp-Au-a7U"/>
                     </view>
                     <connections>
+                        <outlet property="AgeTextField" destination="hPt-JN-yFi" id="0ec-ta-MTJ"/>
+                        <outlet property="CheckButton" destination="wGK-BI-XoC" id="rXP-P7-4ON"/>
+                        <outlet property="DiseaseLibraryButton" destination="uAx-io-wCj" id="UsX-US-8ks"/>
+                        <outlet property="LocationTextField" destination="Suv-8t-ho5" id="XIO-CZ-a1C"/>
                         <outlet property="MapView" destination="eca-QH-sSV" id="wg4-ZL-ozq"/>
+                        <outlet property="ProfileButton" destination="dsc-LT-bIl" id="Qae-e2-24r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Hr-QJ-otC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -287,23 +335,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Norml_backgr" translatesAutoresizingMaskIntoConstraints="NO" id="ggN-o5-iQW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Norml_backgr" translatesAutoresizingMaskIntoConstraints="NO" id="ggN-o5-iQW">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Disease" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o22-pR-emy">
+                                <rect key="frame" x="120" y="99" width="174" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gQ9-xG-0Tp">
+                                <rect key="frame" x="40" y="150.5" width="334" height="426"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Disease Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2e0-9A-xLv">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="YjZ-CM-qmy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symptoms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hya-pr-Gma">
+                                        <rect key="frame" x="0.0" y="65" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rgz-wA-6qX">
+                                        <rect key="frame" x="0.0" y="105.5" width="334" height="130"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="dRh-8Z-flF"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precautions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTa-IA-Khd">
+                                        <rect key="frame" x="0.0" y="255.5" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Okv-vO-E3s">
+                                        <rect key="frame" x="0.0" y="296" width="334" height="130"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="8AW-9H-waE"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVy-aq-deB">
+                                <rect key="frame" x="40" y="606.5" width="334" height="45"/>
+                                <color key="backgroundColor" red="0.31764705879999999" green="0.5450980392" blue="0.42745098040000001" alpha="0.84594392119999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="egC-ob-f6U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="WoW-Jc-ghR" firstAttribute="bottom" secondItem="ggN-o5-iQW" secondAttribute="bottom" id="2Ug-al-luh"/>
+                            <constraint firstItem="o22-pR-emy" firstAttribute="top" secondItem="WoW-Jc-ghR" secondAttribute="top" constant="55" id="5Wg-ii-KNk"/>
+                            <constraint firstItem="WoW-Jc-ghR" firstAttribute="trailing" secondItem="o22-pR-emy" secondAttribute="trailing" constant="120" id="EZD-MT-Mgd"/>
+                            <constraint firstItem="gQ9-xG-0Tp" firstAttribute="top" secondItem="o22-pR-emy" secondAttribute="bottom" constant="25" id="GeF-9s-o7w"/>
+                            <constraint firstItem="AVy-aq-deB" firstAttribute="top" secondItem="gQ9-xG-0Tp" secondAttribute="bottom" constant="30" id="OKZ-cS-5p0"/>
                             <constraint firstItem="ggN-o5-iQW" firstAttribute="top" secondItem="WoW-Jc-ghR" secondAttribute="top" id="Ohg-B6-JLy"/>
+                            <constraint firstItem="WoW-Jc-ghR" firstAttribute="trailing" secondItem="AVy-aq-deB" secondAttribute="trailing" constant="40" id="QgT-Bf-hx9"/>
                             <constraint firstItem="ggN-o5-iQW" firstAttribute="leading" secondItem="WoW-Jc-ghR" secondAttribute="leading" id="bgk-aW-TCP"/>
+                            <constraint firstItem="gQ9-xG-0Tp" firstAttribute="leading" secondItem="WoW-Jc-ghR" secondAttribute="leading" constant="40" id="cHM-iQ-VEF"/>
+                            <constraint firstItem="o22-pR-emy" firstAttribute="leading" secondItem="WoW-Jc-ghR" secondAttribute="leading" constant="120" id="phR-69-A3Z"/>
+                            <constraint firstItem="WoW-Jc-ghR" firstAttribute="trailing" secondItem="gQ9-xG-0Tp" secondAttribute="trailing" constant="40" id="qSw-3E-HYB"/>
                             <constraint firstItem="WoW-Jc-ghR" firstAttribute="trailing" secondItem="ggN-o5-iQW" secondAttribute="trailing" id="vg6-J9-TwU"/>
+                            <constraint firstItem="AVy-aq-deB" firstAttribute="leading" secondItem="WoW-Jc-ghR" secondAttribute="leading" constant="40" id="vio-Ri-5oQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WoW-Jc-ghR"/>
                     </view>
+                    <connections>
+                        <outlet property="AddButton" destination="AVy-aq-deB" id="7ez-ii-xew"/>
+                        <outlet property="AddDiseaseLabel" destination="o22-pR-emy" id="BFo-Dn-0jP"/>
+                        <outlet property="DiseaseNameTextField" destination="2e0-9A-xLv" id="sWe-3t-fx1"/>
+                        <outlet property="PrecautionLabel" destination="WTa-IA-Khd" id="drv-c0-Cc2"/>
+                        <outlet property="PrecautionTextView" destination="Okv-vO-E3s" id="dTA-fB-8Pu"/>
+                        <outlet property="SymptomsLabel" destination="hya-pr-Gma" id="eCa-d4-cCr"/>
+                        <outlet property="SymptomsTextView" destination="Rgz-wA-6qX" id="Awm-eq-Xim"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3e-Ac-iKx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3285.507246376812" y="-98.4375"/>
+            <point key="canvasLocation" x="3247.826086956522" y="654.91071428571422"/>
         </scene>
         <!--Admin View Controller-->
         <scene sceneID="rR7-tt-IFU">
@@ -425,5 +555,6 @@
     <resources>
         <image name="LoginScr_Backgr" width="206" height="449"/>
         <image name="Norml_backgr" width="144" height="313"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>

@@ -16,6 +16,16 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var MapView: MKMapView!
     
+    @IBOutlet weak var AgeTextField: UITextField!
+    
+    
+    @IBOutlet weak var LocationTextField: UITextField!
+    
+    @IBOutlet weak var CheckButton: UIButton!
+    
+    @IBOutlet weak var DiseaseLibraryButton: UIButton!
+    
+    @IBOutlet weak var ProfileButton: UIButton!
     
     // MARK: - Lifecycale
 
@@ -23,10 +33,18 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupUI()
+        
     }
     
 
     // MARK: - Functions
 
-
+    func setupUI()   {
+           Utilities.filledButton(button: CheckButton)
+            Utilities.filledButton(button: DiseaseLibraryButton)
+        
+                ProfileButton.layer.cornerRadius = ProfileButton.frame.width/2
+        ProfileButton.layer.masksToBounds = true
+       }
 }

@@ -11,26 +11,39 @@ import MapKit
 
 class AddDiseaseViewController: UIViewController {
 
+   // MARK: - Properties
+    
+    @IBOutlet weak var AddDiseaseLabel: UILabel!
+    
+    
+    @IBOutlet weak var DiseaseNameTextField: UITextField!
+    
+    
+    @IBOutlet weak var SymptomsLabel: UILabel!
+    
    
+    @IBOutlet weak var SymptomsTextView: UITextView!
     
     
+    @IBOutlet weak var PrecautionLabel: UILabel!
     
     
+    @IBOutlet weak var PrecautionTextView: UITextView!
+    
+    @IBOutlet weak var AddButton: UIButton!
+    
+    // MARK: - Lifecycale
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupUI()
     }
     
+ // MARK: - Functions
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    func setupUI()   {
+           Utilities.filledButton(button: AddButton)
+            
+       }
 }
