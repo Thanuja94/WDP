@@ -60,8 +60,11 @@ class LoginViewController: UIViewController {
             
             print("DEBUG: login successfully ")
             
-           let homeViewController = HomeViewController()
-           self.navigationController?.pushViewController(homeViewController, animated: true)
+//           let homeViewController = HomeViewController()
+//           self.navigationController?.pushViewController(homeViewController, animated: true)
+            
+            let newView = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+            self.navigationController?.pushViewController(newView, animated: true)
         }
         
         

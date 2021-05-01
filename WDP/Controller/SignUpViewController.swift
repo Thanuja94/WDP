@@ -56,14 +56,15 @@ class SignUpViewController: UIViewController {
         guard let email = EmailTextField.text else { return }
         guard let password = PasswordTextField.text else { return }
         guard let occupation = OccupationTextField.text else { return }
-        
+        let role = "Normal"
 
         
         let values = [
         "firstname": firstname,
         "lastname": lastname,
         "email": email,
-        "occuption": occupation
+        "occuption": occupation,
+        "role": role
         
         
         ] as [String : Any]
@@ -85,6 +86,10 @@ class SignUpViewController: UIViewController {
                                          print("DEBUG: failto save \(error)")
                                          return
                                      }
+                
+                let newView = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+                          self.navigationController?.pushViewController(newView, animated: true)
+                
             }
             
         }

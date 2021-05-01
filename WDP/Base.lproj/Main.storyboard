@@ -225,7 +225,7 @@
         <!--Home View Controller-->
         <scene sceneID="XgT-X0-Sk5">
             <objects>
-                <viewController id="c7y-QA-KGh" customClass="HomeViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="c7y-QA-KGh" customClass="HomeViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UCv-8B-KsV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
