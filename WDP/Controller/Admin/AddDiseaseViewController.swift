@@ -46,4 +46,40 @@ class AddDiseaseViewController: UIViewController {
            Utilities.filledButton(button: AddButton)
             
        }
+    
+    
+    
+    @IBAction func HandleAdd(_ sender: Any) {
+        
+        guard let diseasename = DiseaseNameTextField.text else { return }
+        
+        guard let symptoms = SymptomsTextView.text else { return }
+
+        guard let precautions = PrecautionTextView.text else { return }
+
+        
+        let values = [
+              "diseasename": diseasename,
+              "symptoms": symptoms,
+              "precautions": precautions
+              
+              ] as [String : Any]
+        
+        
+        
+        DB_REF.child("diseases").child(diseasename).updateChildValues(values){ (error, ref) in
+            
+            print("DEBUG: Successfully save data ")
+            
+            if let error = error {
+                                     print("DEBUG: failto save \(error)")
+                                     return
+                                 }
+            
+           
+            
+        }
+        
+    }
+    
 }

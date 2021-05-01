@@ -11,6 +11,8 @@ import Firebase
 
 let DB_REF = Database.database().reference()
 let REF_USERS = DB_REF.child("users")
+let REF_DISEASE = DB_REF.child("diseases")
+
 
 
 struct Service {
@@ -31,4 +33,14 @@ struct Service {
           }
       }
     
+    
+    func fetchDiseaseData(diseaseName: String, completion: @escaping(Disease) -> Void) {
+        REF_DISEASE.child(diseaseName).observeSingleEvent(of: .value) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: Any] else { return }
+            let diseaseName = snapshot.key
+            let disease = Disease(diseaseName: diseaseName, dictionary: dictionary)
+
+            completion(disease)
+       }
+   }
 }

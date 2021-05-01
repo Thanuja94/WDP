@@ -26,6 +26,7 @@
 		4401E3D1263AF5440049E591 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4401E3D0263AF5440049E591 /* GoogleService-Info.plist */; };
 		4401E3D3263D6AC00049E591 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3D2263D6AC00049E591 /* User.swift */; };
 		4401E3D6263D6C490049E591 /* SharedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3D5263D6C490049E591 /* SharedService.swift */; };
+		4401E3D8263D9B310049E591 /* Disease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3D7263D9B310049E591 /* Disease.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		4401E3D0263AF5440049E591 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4401E3D2263D6AC00049E591 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4401E3D5263D6C490049E591 /* SharedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedService.swift; sourceTree = "<group>"; };
+		4401E3D7263D9B310049E591 /* Disease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disease.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				4401E3D2263D6AC00049E591 /* User.swift */,
+				4401E3D7263D9B310049E591 /* Disease.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				4401E3C9263796020049E591 /* AddDiseaseViewController.swift in Sources */,
 				4401E3A22628FA2B0049E591 /* AppDelegate.swift in Sources */,
 				4401E3A42628FA2B0049E591 /* SceneDelegate.swift in Sources */,
+				4401E3D8263D9B310049E591 /* Disease.swift in Sources */,
 				4401E3CB26392BAE0049E591 /* EditDiseaseViewController.swift in Sources */,
 				4401E3C22630B2550049E591 /* AdminViewController.swift in Sources */,
 				4401E3D6263D6C490049E591 /* SharedService.swift in Sources */,
