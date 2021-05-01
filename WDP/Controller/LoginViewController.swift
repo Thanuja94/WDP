@@ -45,6 +45,8 @@ class LoginViewController: UIViewController {
     
     
     
+    
+    
     @IBAction func HandleSignIn(_ sender: Any) {
         
         guard let email = EmalTextField.text else { return }
@@ -63,12 +65,34 @@ class LoginViewController: UIViewController {
 //           let homeViewController = HomeViewController()
 //           self.navigationController?.pushViewController(homeViewController, animated: true)
             
-            let newView = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
-            self.navigationController?.pushViewController(newView, animated: true)
+            self.checkUserRole()
+            
+            
         }
+        
         
         
     }
     
 
+    func checkUserRole()  {
+        Service.shared.fetchUserData(uid: Service.shared.currentUserID ?? ""){(user)in
+
+            let role = user.role
+            
+            if(role == "Normal"){
+                let newView = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+                self.navigationController?.pushViewController(newView, animated: true)
+                
+            }
+            if (role == "Admin") {
+                let newView = self.storyboard?.instantiateViewController(withIdentifier: "AdminVC") as! AdminViewController
+                self.navigationController?.pushViewController(newView, animated: true)
+
+                
+            }
+           
+        }
+    }
+    
 }

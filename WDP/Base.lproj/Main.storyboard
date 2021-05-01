@@ -695,7 +695,7 @@
         <!--Admin View Controller-->
         <scene sceneID="rR7-tt-IFU">
             <objects>
-                <viewController id="0wo-s3-Utj" customClass="AdminViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminVC" id="0wo-s3-Utj" customClass="AdminViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="grC-Wh-8kb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
