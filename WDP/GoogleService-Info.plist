@@ -30,5 +30,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:799470257929:ios:e3ea3e034f3b169d42f5d8</string>
+	<key>DATABASE_URL</key>
+	<string>https://weather-disease-protector-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

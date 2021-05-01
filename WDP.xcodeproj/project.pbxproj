@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,17 @@
 		4401E3AB2628FA2C0049E591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4401E3AA2628FA2C0049E591 /* Assets.xcassets */; };
 		4401E3AE2628FA2C0049E591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4401E3AC2628FA2C0049E591 /* LaunchScreen.storyboard */; };
 		4401E3BA262965E60049E591 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3B9262965E60049E591 /* LoginViewController.swift */; };
-		4401E3BC262F64020049E591 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4401E3BB262F64010049E591 /* GoogleService-Info.plist */; };
+		4401E3BE2630B0600049E591 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3BD2630B0600049E591 /* SignUpViewController.swift */; };
+		4401E3C02630B0BF0049E591 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3BF2630B0BF0049E591 /* HomeViewController.swift */; };
+		4401E3C22630B2550049E591 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3C12630B2550049E591 /* AdminViewController.swift */; };
+		4401E3C42636CDCF0049E591 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3C32636CDCF0049E591 /* Utilities.swift */; };
+		4401E3C9263796020049E591 /* AddDiseaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3C8263796020049E591 /* AddDiseaseViewController.swift */; };
+		4401E3CB26392BAE0049E591 /* EditDiseaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3CA26392BAE0049E591 /* EditDiseaseViewController.swift */; };
+		4401E3CD263960310049E591 /* DiseaseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3CC263960310049E591 /* DiseaseInfoViewController.swift */; };
+		4401E3CF263A81700049E591 /* AdminUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3CE263A81700049E591 /* AdminUserProfileViewController.swift */; };
+		4401E3D1263AF5440049E591 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4401E3D0263AF5440049E591 /* GoogleService-Info.plist */; };
+		4401E3D3263D6AC00049E591 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3D2263D6AC00049E591 /* User.swift */; };
+		4401E3D6263D6C490049E591 /* SharedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3D5263D6C490049E591 /* SharedService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +41,17 @@
 		4401E3AD2628FA2C0049E591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4401E3AF2628FA2C0049E591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4401E3B9262965E60049E591 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4401E3BB262F64010049E591 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4401E3BD2630B0600049E591 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4401E3BF2630B0BF0049E591 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4401E3C12630B2550049E591 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		4401E3C32636CDCF0049E591 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		4401E3C8263796020049E591 /* AddDiseaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiseaseViewController.swift; sourceTree = "<group>"; };
+		4401E3CA26392BAE0049E591 /* EditDiseaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiseaseViewController.swift; sourceTree = "<group>"; };
+		4401E3CC263960310049E591 /* DiseaseInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseInfoViewController.swift; sourceTree = "<group>"; };
+		4401E3CE263A81700049E591 /* AdminUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminUserProfileViewController.swift; sourceTree = "<group>"; };
+		4401E3D0263AF5440049E591 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4401E3D2263D6AC00049E591 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4401E3D5263D6C490049E591 /* SharedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,17 +95,18 @@
 		4401E3A02628FA2B0049E591 /* WDP */ = {
 			isa = PBXGroup;
 			children = (
-				4401E3B82628FAEE0049E591 /* Utils */,
+				4401E3D4263D6C270049E591 /* Services */,
 				4401E3B72628FAE30049E591 /* Models */,
 				4401E3B62628FADA0049E591 /* Views */,
 				4401E3B52628FACE0049E591 /* Controller */,
+				4401E3B82628FAEE0049E591 /* Utils */,
 				4401E3A12628FA2B0049E591 /* AppDelegate.swift */,
 				4401E3A32628FA2B0049E591 /* SceneDelegate.swift */,
 				4401E3A52628FA2B0049E591 /* ViewController.swift */,
 				4401E3A72628FA2B0049E591 /* Main.storyboard */,
 				4401E3AA2628FA2C0049E591 /* Assets.xcassets */,
 				4401E3AC2628FA2C0049E591 /* LaunchScreen.storyboard */,
-				4401E3BB262F64010049E591 /* GoogleService-Info.plist */,
+				4401E3D0263AF5440049E591 /* GoogleService-Info.plist */,
 				4401E3AF2628FA2C0049E591 /* Info.plist */,
 			);
 			path = WDP;
@@ -94,7 +115,12 @@
 		4401E3B52628FACE0049E591 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4401E3C7263795B60049E591 /* Admin */,
 				4401E3B9262965E60049E591 /* LoginViewController.swift */,
+				4401E3BD2630B0600049E591 /* SignUpViewController.swift */,
+				4401E3BF2630B0BF0049E591 /* HomeViewController.swift */,
+				4401E3C12630B2550049E591 /* AdminViewController.swift */,
+				4401E3CC263960310049E591 /* DiseaseInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -109,6 +135,7 @@
 		4401E3B72628FAE30049E591 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4401E3D2263D6AC00049E591 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,8 +143,27 @@
 		4401E3B82628FAEE0049E591 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4401E3C32636CDCF0049E591 /* Utilities.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		4401E3C7263795B60049E591 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				4401E3C8263796020049E591 /* AddDiseaseViewController.swift */,
+				4401E3CA26392BAE0049E591 /* EditDiseaseViewController.swift */,
+				4401E3CE263A81700049E591 /* AdminUserProfileViewController.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		4401E3D4263D6C270049E591 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4401E3D5263D6C490049E591 /* SharedService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B8E71EB126A4BD821840974E /* Pods */ = {
@@ -126,7 +172,6 @@
 				16BC1F07FD6A5DD283843A65 /* Pods-WDP.debug.xcconfig */,
 				2BF30603E1F2BE058047BAF9 /* Pods-WDP.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -191,7 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4401E3AE2628FA2C0049E591 /* LaunchScreen.storyboard in Resources */,
-				4401E3BC262F64020049E591 /* GoogleService-Info.plist in Resources */,
+				4401E3D1263AF5440049E591 /* GoogleService-Info.plist in Resources */,
 				4401E3AB2628FA2C0049E591 /* Assets.xcassets in Resources */,
 				4401E3A92628FA2B0049E591 /* Main.storyboard in Resources */,
 			);
@@ -246,10 +291,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4401E3D3263D6AC00049E591 /* User.swift in Sources */,
 				4401E3BA262965E60049E591 /* LoginViewController.swift in Sources */,
 				4401E3A62628FA2B0049E591 /* ViewController.swift in Sources */,
+				4401E3C9263796020049E591 /* AddDiseaseViewController.swift in Sources */,
 				4401E3A22628FA2B0049E591 /* AppDelegate.swift in Sources */,
 				4401E3A42628FA2B0049E591 /* SceneDelegate.swift in Sources */,
+				4401E3CB26392BAE0049E591 /* EditDiseaseViewController.swift in Sources */,
+				4401E3C22630B2550049E591 /* AdminViewController.swift in Sources */,
+				4401E3D6263D6C490049E591 /* SharedService.swift in Sources */,
+				4401E3BE2630B0600049E591 /* SignUpViewController.swift in Sources */,
+				4401E3C42636CDCF0049E591 /* Utilities.swift in Sources */,
+				4401E3C02630B0BF0049E591 /* HomeViewController.swift in Sources */,
+				4401E3CD263960310049E591 /* DiseaseInfoViewController.swift in Sources */,
+				4401E3CF263A81700049E591 /* AdminUserProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
