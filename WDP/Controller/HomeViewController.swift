@@ -47,4 +47,19 @@ class HomeViewController: UIViewController {
                 ProfileButton.layer.cornerRadius = ProfileButton.frame.width/2
         ProfileButton.layer.masksToBounds = true
        }
+    
+    
+    
+    @IBAction func HandleCheck(_ sender: Any) {
+        
+
+        
+        
+    }
+    
+    @IBAction func HandleDiseaseLibrary(_ sender: Any) {
+        
+        
+    }
+    
 }

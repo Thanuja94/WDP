@@ -284,6 +284,9 @@
                                         <state key="normal" title="Check">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="HandleCheck:" destination="c7y-QA-KGh" eventType="touchUpInside" id="Bga-Ab-UAs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAx-io-wCj">
                                         <rect key="frame" x="0.0" y="60" width="334" height="40"/>
@@ -295,6 +298,9 @@
                                         <state key="normal" title="Disease Library">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="HandleDiseaseLibrary:" destination="c7y-QA-KGh" eventType="touchUpInside" id="4QV-Nc-Ily"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -336,7 +342,7 @@
         <!--Disease Info View Controller-->
         <scene sceneID="j4L-IV-w6x">
             <objects>
-                <viewController id="uRS-ns-scb" customClass="DiseaseInfoViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiseaseInfoVC" id="uRS-ns-scb" customClass="DiseaseInfoViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X05-AG-6Ef">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -428,7 +434,7 @@
         <!--Add Disease View Controller-->
         <scene sceneID="xDx-xR-0Bg">
             <objects>
-                <viewController id="sNX-3q-ADI" customClass="AddDiseaseViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddDiseaseVC" id="sNX-3q-ADI" customClass="AddDiseaseViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KdR-dG-4Ik">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -459,7 +465,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="runny or stuffy nose, Sore throat, Cough, Congestion, sneezing, low grade fever. " textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Rgz-wA-6qX">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Rgz-wA-6qX">
                                         <rect key="frame" x="0.0" y="105.5" width="334" height="130"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -475,7 +481,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="use tissues, Wear mask when go out, use warm fluids, drink lemon drinks or drinks including vitamin C" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Okv-vO-E3s">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Okv-vO-E3s">
                                         <rect key="frame" x="0.0" y="296" width="334" height="130"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -534,7 +540,7 @@
         <!--Edit Disease View Controller-->
         <scene sceneID="Udt-rz-8tJ">
             <objects>
-                <viewController id="y2I-VP-CCg" customClass="EditDiseaseViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditDiseaseVC" id="y2I-VP-CCg" customClass="EditDiseaseViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x3l-27-XLq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -727,6 +733,9 @@
                                         <state key="normal" title="Add Disease">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="HandleAddDiseases:" destination="0wo-s3-Utj" eventType="touchUpInside" id="1R0-1y-Ycf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tN-wV-AjH">
                                         <rect key="frame" x="0.0" y="140" width="334" height="40"/>
@@ -738,6 +747,9 @@
                                         <state key="normal" title="Edit Disease">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="HandleEditDiseases:" destination="0wo-s3-Utj" eventType="touchUpInside" id="xSZ-EX-5tQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejb-As-8YM">
                                         <rect key="frame" x="0.0" y="210" width="334" height="40"/>
@@ -749,6 +761,9 @@
                                         <state key="normal" title="View Home Page">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="HandleViewHomePage:" destination="0wo-s3-Utj" eventType="touchUpInside" id="PLl-8x-raz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

@@ -24,6 +24,8 @@
 		4401E3CD263960310049E591 /* DiseaseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3CC263960310049E591 /* DiseaseInfoViewController.swift */; };
 		4401E3CF263A81700049E591 /* AdminUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3CE263A81700049E591 /* AdminUserProfileViewController.swift */; };
 		4401E3D1263AF5440049E591 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4401E3D0263AF5440049E591 /* GoogleService-Info.plist */; };
+		4401E3D3263D6AC00049E591 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3D2263D6AC00049E591 /* User.swift */; };
+		4401E3D6263D6C490049E591 /* SharedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3D5263D6C490049E591 /* SharedService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		4401E3CC263960310049E591 /* DiseaseInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseInfoViewController.swift; sourceTree = "<group>"; };
 		4401E3CE263A81700049E591 /* AdminUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminUserProfileViewController.swift; sourceTree = "<group>"; };
 		4401E3D0263AF5440049E591 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4401E3D2263D6AC00049E591 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4401E3D5263D6C490049E591 /* SharedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 		4401E3A02628FA2B0049E591 /* WDP */ = {
 			isa = PBXGroup;
 			children = (
+				4401E3D4263D6C270049E591 /* Services */,
 				4401E3B72628FAE30049E591 /* Models */,
 				4401E3B62628FADA0049E591 /* Views */,
 				4401E3B52628FACE0049E591 /* Controller */,
@@ -130,6 +135,7 @@
 		4401E3B72628FAE30049E591 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4401E3D2263D6AC00049E591 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,6 +156,14 @@
 				4401E3CE263A81700049E591 /* AdminUserProfileViewController.swift */,
 			);
 			path = Admin;
+			sourceTree = "<group>";
+		};
+		4401E3D4263D6C270049E591 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4401E3D5263D6C490049E591 /* SharedService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B8E71EB126A4BD821840974E /* Pods */ = {
@@ -277,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4401E3D3263D6AC00049E591 /* User.swift in Sources */,
 				4401E3BA262965E60049E591 /* LoginViewController.swift in Sources */,
 				4401E3A62628FA2B0049E591 /* ViewController.swift in Sources */,
 				4401E3C9263796020049E591 /* AddDiseaseViewController.swift in Sources */,
@@ -284,6 +299,7 @@
 				4401E3A42628FA2B0049E591 /* SceneDelegate.swift in Sources */,
 				4401E3CB26392BAE0049E591 /* EditDiseaseViewController.swift in Sources */,
 				4401E3C22630B2550049E591 /* AdminViewController.swift in Sources */,
+				4401E3D6263D6C490049E591 /* SharedService.swift in Sources */,
 				4401E3BE2630B0600049E591 /* SignUpViewController.swift in Sources */,
 				4401E3C42636CDCF0049E591 /* Utilities.swift in Sources */,
 				4401E3C02630B0BF0049E591 /* HomeViewController.swift in Sources */,

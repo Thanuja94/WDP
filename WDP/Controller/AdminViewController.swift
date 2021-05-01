@@ -47,7 +47,21 @@ class AdminViewController: UIViewController {
 
       }
     
-    
-    
+    @IBAction func HandleAddDiseases(_ sender: Any) {
+        
+        
+        let newView = self.storyboard?.instantiateViewController(withIdentifier: "AddDiseaseVC") as! AddDiseaseViewController
+                  self.navigationController?.pushViewController(newView, animated: true)
 
+    }
+    
+    
+    @IBAction func HandleEditDiseases(_ sender: Any) {
+    }
+    
+    
+    @IBAction func HandleViewHomePage(_ sender: Any) {
+    }
+    
+    
 }
