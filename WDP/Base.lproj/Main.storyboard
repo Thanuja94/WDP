@@ -27,6 +27,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="HandleSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWZ-s6-0FP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="or5-9n-MDv">
                                 <rect key="frame" x="40" y="454" width="334" height="40"/>
@@ -116,6 +119,9 @@
                                 <state key="normal" title="Already have an Account?">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="HandleAlreadyhave:" destination="2hx-xc-xv3" eventType="touchUpInside" id="nUd-c5-6dY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hen-Vt-GQp">
                                 <rect key="frame" x="40" y="474" width="334" height="40"/>

@@ -93,4 +93,13 @@ class SignUpViewController: UIViewController {
     }
     
     
+    @IBAction func HandleAlreadyhave(_ sender: Any) {
+        
+        navigationController?.popViewController(animated: true)
+        
+        
+    }
+    
+    
+    
 }
