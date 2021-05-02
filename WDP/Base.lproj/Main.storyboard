@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FsN-Qg-gAk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DgX-F2-rqa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -759,15 +759,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oIt-mL-3CC">
+                                <rect key="frame" x="40" y="175.5" width="334" height="686.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiseaseCell" id="xKG-xI-Jyt">
+                                        <rect key="frame" x="0.0" y="28" width="334" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xKG-xI-Jyt" id="fma-ub-EzI">
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="oIt-mL-3CC" firstAttribute="leading" secondItem="f09-uk-CSq" secondAttribute="leading" constant="40" id="7r6-9j-IPt"/>
                             <constraint firstItem="zj0-v9-Tpd" firstAttribute="leading" secondItem="f09-uk-CSq" secondAttribute="leading" constant="100" id="8vM-jy-FUx"/>
                             <constraint firstItem="zj0-v9-Tpd" firstAttribute="top" secondItem="f09-uk-CSq" secondAttribute="top" constant="55" id="DB8-KT-00M"/>
+                            <constraint firstItem="f09-uk-CSq" firstAttribute="bottom" secondItem="oIt-mL-3CC" secondAttribute="bottom" id="VTZ-Pp-ffn"/>
+                            <constraint firstItem="oIt-mL-3CC" firstAttribute="top" secondItem="zj0-v9-Tpd" secondAttribute="bottom" constant="50" id="bNq-KN-9oG"/>
+                            <constraint firstItem="f09-uk-CSq" firstAttribute="trailing" secondItem="oIt-mL-3CC" secondAttribute="trailing" constant="40" id="mbJ-0i-UG5"/>
                             <constraint firstItem="f09-uk-CSq" firstAttribute="trailing" secondItem="zj0-v9-Tpd" secondAttribute="trailing" constant="100" id="n6N-u8-61I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f09-uk-CSq"/>
                     </view>
+                    <connections>
+                        <outlet property="DiseaseListLabel" destination="zj0-v9-Tpd" id="mLS-sn-Pw4"/>
+                        <outlet property="DiseaseTableView" destination="oIt-mL-3CC" id="5dp-9l-u9F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71x-Sa-NK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

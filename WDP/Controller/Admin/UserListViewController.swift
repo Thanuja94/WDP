@@ -33,7 +33,7 @@ class UserListViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         tabelDataSetup()
-        retrieveBooks()
+        retrieveUsers()
     }
     
     // MARK: - Functions
@@ -45,7 +45,7 @@ class UserListViewController: UIViewController {
     
     
     
-    func retrieveBooks(){
+    func retrieveUsers(){
         
         ref.observe(DataEventType.value, with:{(snapshot) in
             
