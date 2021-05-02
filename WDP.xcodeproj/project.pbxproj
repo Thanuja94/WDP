@@ -27,6 +27,9 @@
 		4401E3D3263D6AC00049E591 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3D2263D6AC00049E591 /* User.swift */; };
 		4401E3D6263D6C490049E591 /* SharedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3D5263D6C490049E591 /* SharedService.swift */; };
 		4401E3D8263D9B310049E591 /* Disease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3D7263D9B310049E591 /* Disease.swift */; };
+		4401E3DA263E28A60049E591 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3D9263E28A50049E591 /* UserListViewController.swift */; };
+		4401E3DC263E6A140049E591 /* DiseaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3DB263E6A140049E591 /* DiseaseListViewController.swift */; };
+		4401E3DE263E868B0049E591 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3DD263E868A0049E591 /* UserList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		4401E3D2263D6AC00049E591 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4401E3D5263D6C490049E591 /* SharedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedService.swift; sourceTree = "<group>"; };
 		4401E3D7263D9B310049E591 /* Disease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disease.swift; sourceTree = "<group>"; };
+		4401E3D9263E28A50049E591 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		4401E3DB263E6A140049E591 /* DiseaseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseListViewController.swift; sourceTree = "<group>"; };
+		4401E3DD263E868A0049E591 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 			children = (
 				4401E3D2263D6AC00049E591 /* User.swift */,
 				4401E3D7263D9B310049E591 /* Disease.swift */,
+				4401E3DD263E868A0049E591 /* UserList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +164,8 @@
 				4401E3C8263796020049E591 /* AddDiseaseViewController.swift */,
 				4401E3CA26392BAE0049E591 /* EditDiseaseViewController.swift */,
 				4401E3CE263A81700049E591 /* AdminUserProfileViewController.swift */,
+				4401E3D9263E28A50049E591 /* UserListViewController.swift */,
+				4401E3DB263E6A140049E591 /* DiseaseListViewController.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -295,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4401E3D3263D6AC00049E591 /* User.swift in Sources */,
+				4401E3DA263E28A60049E591 /* UserListViewController.swift in Sources */,
 				4401E3BA262965E60049E591 /* LoginViewController.swift in Sources */,
 				4401E3A62628FA2B0049E591 /* ViewController.swift in Sources */,
 				4401E3C9263796020049E591 /* AddDiseaseViewController.swift in Sources */,
@@ -303,7 +313,9 @@
 				4401E3D8263D9B310049E591 /* Disease.swift in Sources */,
 				4401E3CB26392BAE0049E591 /* EditDiseaseViewController.swift in Sources */,
 				4401E3C22630B2550049E591 /* AdminViewController.swift in Sources */,
+				4401E3DE263E868B0049E591 /* UserList.swift in Sources */,
 				4401E3D6263D6C490049E591 /* SharedService.swift in Sources */,
+				4401E3DC263E6A140049E591 /* DiseaseListViewController.swift in Sources */,
 				4401E3BE2630B0600049E591 /* SignUpViewController.swift in Sources */,
 				4401E3C42636CDCF0049E591 /* Utilities.swift in Sources */,
 				4401E3C02630B0BF0049E591 /* HomeViewController.swift in Sources */,
