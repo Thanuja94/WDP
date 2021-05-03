@@ -621,6 +621,9 @@
                                         <state key="normal" title="Delete Disease">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="HandleDelete:" destination="y2I-VP-CCg" eventType="touchUpInside" id="VLX-hk-bbL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45K-oF-tA2">
                                         <rect key="frame" x="0.0" y="65" width="334" height="45"/>
@@ -632,6 +635,9 @@
                                         <state key="normal" title="Save Changes">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="HandleSaveChanges:" destination="y2I-VP-CCg" eventType="touchUpInside" id="6nx-gD-Gsl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
