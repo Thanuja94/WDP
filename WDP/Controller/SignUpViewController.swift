@@ -77,6 +77,7 @@ class SignUpViewController: UIViewController {
                            return
                        }
              guard let uid = result?.user.uid else { return }
+        
             
             Database.database().reference().child("users").child(uid).updateChildValues(values){ (error, ref) in
                 

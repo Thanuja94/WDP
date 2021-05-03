@@ -503,6 +503,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="HandleAdd:" destination="sNX-3q-ADI" eventType="touchUpInside" id="4Pb-6n-quv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -618,6 +621,9 @@
                                         <state key="normal" title="Delete Disease">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="HandleDelete:" destination="y2I-VP-CCg" eventType="touchUpInside" id="VLX-hk-bbL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45K-oF-tA2">
                                         <rect key="frame" x="0.0" y="65" width="334" height="45"/>
@@ -629,6 +635,9 @@
                                         <state key="normal" title="Save Changes">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="HandleSaveChanges:" destination="y2I-VP-CCg" eventType="touchUpInside" id="6nx-gD-Gsl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -666,6 +675,56 @@
             </objects>
             <point key="canvasLocation" x="4086.9565217391309" y="654.91071428571422"/>
         </scene>
+        <!--User List View Controller-->
+        <scene sceneID="6ug-OJ-fZT">
+            <objects>
+                <viewController storyboardIdentifier="UserListVC" id="FsN-Qg-gAk" customClass="UserListViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s6h-5x-HIt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEi-Zh-oUZ">
+                                <rect key="frame" x="100" y="99" width="214" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9kx-eC-YXV">
+                                <rect key="frame" x="40" y="175.5" width="334" height="686.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="wcM-qZ-Saa">
+                                        <rect key="frame" x="0.0" y="28" width="334" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wcM-qZ-Saa" id="pBp-bo-j91">
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BEi-Zh-oUZ" firstAttribute="leading" secondItem="72V-nO-jQG" secondAttribute="leading" constant="100" id="W1R-CU-4NV"/>
+                            <constraint firstItem="9kx-eC-YXV" firstAttribute="leading" secondItem="72V-nO-jQG" secondAttribute="leading" constant="40" id="Xm2-Lg-2V5"/>
+                            <constraint firstItem="72V-nO-jQG" firstAttribute="bottom" secondItem="9kx-eC-YXV" secondAttribute="bottom" id="egi-aV-isF"/>
+                            <constraint firstItem="72V-nO-jQG" firstAttribute="trailing" secondItem="9kx-eC-YXV" secondAttribute="trailing" constant="40" id="ftl-h6-2dh"/>
+                            <constraint firstItem="BEi-Zh-oUZ" firstAttribute="top" secondItem="72V-nO-jQG" secondAttribute="top" constant="55" id="hov-lX-Dva"/>
+                            <constraint firstItem="9kx-eC-YXV" firstAttribute="top" secondItem="BEi-Zh-oUZ" secondAttribute="bottom" constant="50" id="oBk-uz-hXP"/>
+                            <constraint firstItem="72V-nO-jQG" firstAttribute="trailing" secondItem="BEi-Zh-oUZ" secondAttribute="trailing" constant="100" id="vT5-yN-z3K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="72V-nO-jQG"/>
+                    </view>
+                    <connections>
+                        <outlet property="UserListLabel" destination="BEi-Zh-oUZ" id="R6w-h2-esX"/>
+                        <outlet property="UsersTableView" destination="9kx-eC-YXV" id="9XX-oB-eS9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xZ-pI-NVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4860.8695652173919" y="654.91071428571422"/>
+        </scene>
         <!--Admin User Profile View Controller-->
         <scene sceneID="yab-uT-LeL">
             <objects>
@@ -690,7 +749,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGP-1u-tPn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4910" y="655"/>
+            <point key="canvasLocation" x="5709" y="655"/>
+        </scene>
+        <!--Disease List View Controller-->
+        <scene sceneID="hhv-yX-ZU5">
+            <objects>
+                <viewController storyboardIdentifier="DiseaseListVC" id="DgX-F2-rqa" customClass="DiseaseListViewController" customModule="WDP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CFu-LZ-fQa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disease List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zj0-v9-Tpd">
+                                <rect key="frame" x="100" y="99" width="214" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oIt-mL-3CC">
+                                <rect key="frame" x="40" y="175.5" width="334" height="686.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiseaseCell" id="xKG-xI-Jyt">
+                                        <rect key="frame" x="0.0" y="28" width="334" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xKG-xI-Jyt" id="fma-ub-EzI">
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oIt-mL-3CC" firstAttribute="leading" secondItem="f09-uk-CSq" secondAttribute="leading" constant="40" id="7r6-9j-IPt"/>
+                            <constraint firstItem="zj0-v9-Tpd" firstAttribute="leading" secondItem="f09-uk-CSq" secondAttribute="leading" constant="100" id="8vM-jy-FUx"/>
+                            <constraint firstItem="zj0-v9-Tpd" firstAttribute="top" secondItem="f09-uk-CSq" secondAttribute="top" constant="55" id="DB8-KT-00M"/>
+                            <constraint firstItem="f09-uk-CSq" firstAttribute="bottom" secondItem="oIt-mL-3CC" secondAttribute="bottom" id="VTZ-Pp-ffn"/>
+                            <constraint firstItem="oIt-mL-3CC" firstAttribute="top" secondItem="zj0-v9-Tpd" secondAttribute="bottom" constant="50" id="bNq-KN-9oG"/>
+                            <constraint firstItem="f09-uk-CSq" firstAttribute="trailing" secondItem="oIt-mL-3CC" secondAttribute="trailing" constant="40" id="mbJ-0i-UG5"/>
+                            <constraint firstItem="f09-uk-CSq" firstAttribute="trailing" secondItem="zj0-v9-Tpd" secondAttribute="trailing" constant="100" id="n6N-u8-61I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f09-uk-CSq"/>
+                    </view>
+                    <connections>
+                        <outlet property="DiseaseListLabel" destination="zj0-v9-Tpd" id="mLS-sn-Pw4"/>
+                        <outlet property="DiseaseTableView" destination="oIt-mL-3CC" id="5dp-9l-u9F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="71x-Sa-NK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6553" y="652"/>
         </scene>
         <!--Admin View Controller-->
         <scene sceneID="rR7-tt-IFU">
@@ -722,6 +831,9 @@
                                         <state key="normal" title="Manage Users">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="HandleManageUsers:" destination="0wo-s3-Utj" eventType="touchUpInside" id="K7M-VL-6af"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIu-QS-xdy">
                                         <rect key="frame" x="0.0" y="70" width="334" height="40"/>
