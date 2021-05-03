@@ -125,11 +125,9 @@
 		4401E3B52628FACE0049E591 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4401E3E2263F98B80049E591 /* Home */,
+				4401E3E1263F98670049E591 /* Auth */,
 				4401E3C7263795B60049E591 /* Admin */,
-				4401E3B9262965E60049E591 /* LoginViewController.swift */,
-				4401E3BD2630B0600049E591 /* SignUpViewController.swift */,
-				4401E3BF2630B0BF0049E591 /* HomeViewController.swift */,
-				4401E3C12630B2550049E591 /* AdminViewController.swift */,
 				4401E3CC263960310049E591 /* DiseaseInfoViewController.swift */,
 			);
 			path = Controller;
@@ -164,6 +162,7 @@
 		4401E3C7263795B60049E591 /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				4401E3C12630B2550049E591 /* AdminViewController.swift */,
 				4401E3C8263796020049E591 /* AddDiseaseViewController.swift */,
 				4401E3CA26392BAE0049E591 /* EditDiseaseViewController.swift */,
 				4401E3CE263A81700049E591 /* AdminUserProfileViewController.swift */,
@@ -179,6 +178,23 @@
 				4401E3D5263D6C490049E591 /* SharedService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4401E3E1263F98670049E591 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				4401E3BD2630B0600049E591 /* SignUpViewController.swift */,
+				4401E3B9262965E60049E591 /* LoginViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		4401E3E2263F98B80049E591 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4401E3BF2630B0BF0049E591 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		B8E71EB126A4BD821840974E /* Pods */ = {
