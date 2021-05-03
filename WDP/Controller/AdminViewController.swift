@@ -58,7 +58,7 @@ class AdminViewController: UIViewController {
     
     @IBAction func HandleEditDiseases(_ sender: Any) {
         
-        let newView = self.storyboard?.instantiateViewController(withIdentifier: "EditDiseaseVC") as! EditDiseaseViewController
+        let newView = self.storyboard?.instantiateViewController(withIdentifier: "DiseaseListVC") as! DiseaseListViewController
                    self.navigationController?.pushViewController(newView, animated: true)
     }
     
@@ -69,6 +69,18 @@ class AdminViewController: UIViewController {
         self.navigationController?.pushViewController(newView, animated: true)
 
     }
+    
+    
+    @IBAction func HandleManageUsers(_ sender: Any) {
+        
+        
+        let newView = self.storyboard?.instantiateViewController(withIdentifier: "UserListVC") as! UserListViewController
+        self.navigationController?.pushViewController(newView, animated: true)
+
+
+        
+    }
+    
     
     
 }

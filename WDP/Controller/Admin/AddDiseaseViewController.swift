@@ -71,6 +71,7 @@ class AddDiseaseViewController: UIViewController {
             
             print("DEBUG: Successfully save data ")
             
+            
             if let error = error {
                                      print("DEBUG: failto save \(error)")
                                      return
@@ -79,7 +80,12 @@ class AddDiseaseViewController: UIViewController {
            
             
         }
+          navigationController?.popViewController(animated: true)
         
     }
+    
+    
+    
+    
     
 }

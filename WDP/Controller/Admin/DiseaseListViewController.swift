@@ -69,6 +69,11 @@ extension DiseaseListViewController:UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       print("Tapped")
+        
+      if let VC = self.storyboard?.instantiateViewController(withIdentifier: "EditDiseaseVC") as? EditDiseaseViewController{
+        VC.diseasename = diseaseList[indexPath.row].diseaseName ?? ""
+        self.navigationController?.pushViewController(VC, animated: true)
+        }
     }
 }
 

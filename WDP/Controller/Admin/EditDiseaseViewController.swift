@@ -34,6 +34,8 @@ class EditDiseaseViewController: UIViewController {
     @IBOutlet weak var SaveChangesButton: UIButton!
     
     
+    var diseasename = ""
+    
     
     // MARK: - Lifecycale
     override func viewDidLoad() {
@@ -41,6 +43,8 @@ class EditDiseaseViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setupUI()
+        DiseaseNameTextField.text = diseasename
+        
     }
     
     // MARK: - Functions
