@@ -31,6 +31,8 @@
 		4401E3DC263E6A140049E591 /* DiseaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3DB263E6A140049E591 /* DiseaseListViewController.swift */; };
 		4401E3DE263E868B0049E591 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3DD263E868A0049E591 /* UserList.swift */; };
 		4401E3E0263EA90A0049E591 /* DiseaseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3DF263EA90A0049E591 /* DiseaseList.swift */; };
+		4401E3E4263FA31D0049E591 /* DiseaseLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3E3263FA31D0049E591 /* DiseaseLibraryViewController.swift */; };
+		4401E3E6263FB1860049E591 /* DiseaseLibInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3E5263FB1860049E591 /* DiseaseLibInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		4401E3DB263E6A140049E591 /* DiseaseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseListViewController.swift; sourceTree = "<group>"; };
 		4401E3DD263E868A0049E591 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		4401E3DF263EA90A0049E591 /* DiseaseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseList.swift; sourceTree = "<group>"; };
+		4401E3E3263FA31D0049E591 /* DiseaseLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseLibraryViewController.swift; sourceTree = "<group>"; };
+		4401E3E5263FB1860049E591 /* DiseaseLibInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseLibInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				4401E3BF2630B0BF0049E591 /* HomeViewController.swift */,
+				4401E3E3263FA31D0049E591 /* DiseaseLibraryViewController.swift */,
+				4401E3E5263FB1860049E591 /* DiseaseLibInfoViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -325,10 +331,12 @@
 				4401E3D3263D6AC00049E591 /* User.swift in Sources */,
 				4401E3DA263E28A60049E591 /* UserListViewController.swift in Sources */,
 				4401E3BA262965E60049E591 /* LoginViewController.swift in Sources */,
+				4401E3E6263FB1860049E591 /* DiseaseLibInfoViewController.swift in Sources */,
 				4401E3A62628FA2B0049E591 /* ViewController.swift in Sources */,
 				4401E3C9263796020049E591 /* AddDiseaseViewController.swift in Sources */,
 				4401E3E0263EA90A0049E591 /* DiseaseList.swift in Sources */,
 				4401E3A22628FA2B0049E591 /* AppDelegate.swift in Sources */,
+				4401E3E4263FA31D0049E591 /* DiseaseLibraryViewController.swift in Sources */,
 				4401E3A42628FA2B0049E591 /* SceneDelegate.swift in Sources */,
 				4401E3D8263D9B310049E591 /* Disease.swift in Sources */,
 				4401E3CB26392BAE0049E591 /* EditDiseaseViewController.swift in Sources */,
