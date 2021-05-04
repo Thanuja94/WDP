@@ -33,6 +33,7 @@
 		4401E3E0263EA90A0049E591 /* DiseaseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3DF263EA90A0049E591 /* DiseaseList.swift */; };
 		4401E3E4263FA31D0049E591 /* DiseaseLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3E3263FA31D0049E591 /* DiseaseLibraryViewController.swift */; };
 		4401E3E6263FB1860049E591 /* DiseaseLibInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3E5263FB1860049E591 /* DiseaseLibInfoViewController.swift */; };
+		445A01AF264157CA000A82BD /* PredictedDiseaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445A01AE264157CA000A82BD /* PredictedDiseaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		4401E3DF263EA90A0049E591 /* DiseaseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseList.swift; sourceTree = "<group>"; };
 		4401E3E3263FA31D0049E591 /* DiseaseLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseLibraryViewController.swift; sourceTree = "<group>"; };
 		4401E3E5263FB1860049E591 /* DiseaseLibInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseLibInfoViewController.swift; sourceTree = "<group>"; };
+		445A01AE264157CA000A82BD /* PredictedDiseaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictedDiseaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				4401E3E1263F98670049E591 /* Auth */,
 				4401E3C7263795B60049E591 /* Admin */,
 				4401E3CC263960310049E591 /* DiseaseInfoViewController.swift */,
+				445A01AE264157CA000A82BD /* PredictedDiseaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				4401E3E6263FB1860049E591 /* DiseaseLibInfoViewController.swift in Sources */,
 				4401E3A62628FA2B0049E591 /* ViewController.swift in Sources */,
 				4401E3C9263796020049E591 /* AddDiseaseViewController.swift in Sources */,
+				445A01AF264157CA000A82BD /* PredictedDiseaseViewController.swift in Sources */,
 				4401E3E0263EA90A0049E591 /* DiseaseList.swift in Sources */,
 				4401E3A22628FA2B0049E591 /* AppDelegate.swift in Sources */,
 				4401E3E4263FA31D0049E591 /* DiseaseLibraryViewController.swift in Sources */,

@@ -59,9 +59,18 @@ class EditDiseaseViewController: UIViewController {
     }
     
     
+    
+    
     @IBAction func HandleDelete(_ sender: Any) {
     }
     
+    
+    
+    @IBAction func HandleBack(_ sender: Any) {
+        
+        navigationController?.popViewController(animated: true)
+
+    }
     
     func setupUI()   {
         Utilities.filledButton(button: DeleteDiseaseButton)

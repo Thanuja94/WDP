@@ -70,6 +70,14 @@ class UserListViewController: UIViewController {
         })
         
         }
+    
+    
+    @IBAction func HandleBack(_ sender: Any) {
+        
+        navigationController?.popViewController(animated: true)
+
+    }
+    
 }
 
 

@@ -62,6 +62,13 @@ class DiseaseLibraryViewController: UIViewController {
     })
     
     }
+    
+    
+    @IBAction func HandleBack(_ sender: Any) {
+        
+        
+    }
+    
 
 }
 
