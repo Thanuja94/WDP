@@ -22,7 +22,7 @@ struct User {
     
     
         init(uid: String, dictionary: [String: Any]) {
-        self.uid = uid
+        self.uid = uid 
         self.firstName = dictionary["firstname"] as? String ?? ""
         self.lastName = dictionary["lastname"] as? String ?? ""
         self.email = dictionary["email"] as? String ?? ""

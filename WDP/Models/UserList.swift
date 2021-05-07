@@ -10,11 +10,11 @@ import Foundation
 
 
 class UserList {
-    
+    let uid: String?
+
     let firstName: String?
     let lastName: String?
    
-    let uid: String?
     
 
     
