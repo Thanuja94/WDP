@@ -10,21 +10,34 @@ import UIKit
 
 class AdminUserProfileViewController: UIViewController {
 
+    // MARK: - Properties
+
+    
+    @IBOutlet weak var ProfileNameLabel: UILabel!
+    
+    var uid = ""
+
+    
+     // MARK: - Lifecycale
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //showProfileDetails()
+        showProfileDetails()
+        
     }
     
+    // MARK: - Functions
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func showProfileDetails()  {
+        Service.shared.fetchUserData(uid: uid){(user) in
+            
+            self.ProfileNameLabel.text = user.firstName + " " + user.lastName
+            
+            
+        }
+        
+        
     }
-    */
 
 }

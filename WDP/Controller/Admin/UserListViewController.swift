@@ -57,7 +57,7 @@ class UserListViewController: UIViewController {
                     let userfiestname = userObject?["firstname"]
                     let userlastname = userObject?["lastname"]
 
-                    let uid = userObject?["uid"]
+                    let uid = users.key
                     
                     let user = UserList(uid: uid as! String?, firstname: userfiestname as! String?, lastname: userlastname as! String?)
                     
@@ -70,6 +70,14 @@ class UserListViewController: UIViewController {
         })
         
         }
+    
+    
+    @IBAction func HandleBack(_ sender: Any) {
+        
+        navigationController?.popViewController(animated: true)
+
+    }
+    
 }
 
 
@@ -77,6 +85,11 @@ extension UserListViewController:UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       print("Tapped")
+        
+        if let VC = self.storyboard?.instantiateViewController(withIdentifier: "AdminUserProfVC") as? AdminUserProfileViewController{
+            VC.uid = userList[indexPath.row].uid ?? ""
+        self.navigationController?.pushViewController(VC, animated: true)
+        }
     }
 }
 

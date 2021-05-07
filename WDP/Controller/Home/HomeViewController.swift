@@ -59,7 +59,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func HandleDiseaseLibrary(_ sender: Any) {
         
-        
+        let newView = self.storyboard?.instantiateViewController(withIdentifier: "DiseaseLibraryVC") as! DiseaseLibraryViewController
+        self.navigationController?.pushViewController(newView, animated: true)
     }
     
 }

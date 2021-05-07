@@ -49,6 +49,13 @@ class AddDiseaseViewController: UIViewController {
     
     
     
+    @IBAction func HandleBack(_ sender: Any) {
+        
+        navigationController?.popViewController(animated: true)
+
+    }
+    
+    
     @IBAction func HandleAdd(_ sender: Any) {
         
         guard let diseasename = DiseaseNameTextField.text else { return }
