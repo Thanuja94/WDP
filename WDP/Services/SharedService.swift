@@ -7,6 +7,8 @@
 //
 
 import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 
 let DB_REF = Database.database().reference()

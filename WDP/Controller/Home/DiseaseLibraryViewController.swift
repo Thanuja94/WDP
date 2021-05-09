@@ -8,10 +8,11 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class DiseaseLibraryViewController: UIViewController {
-
-        // MARK: - Properties
+    
+    // MARK: - Properties
     
     @IBOutlet weak var DiseaseLibraryLabel: UILabel!
     
@@ -20,47 +21,47 @@ class DiseaseLibraryViewController: UIViewController {
     
     
     let ref = REF_DISEASE
-       
-        var diseaseList = [DiseaseList]()
+    
+    var diseaseList = [DiseaseList]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       tabelDataSetup()
+        
+        tabelDataSetup()
         retrieveDiseases()
     }
     
-
+    
     // MARK: - Functions
-
-       func tabelDataSetup()  {
-           DiseaseLibTableView.delegate = self
-           DiseaseLibTableView.dataSource = self
-       }
-   
+    
+    func tabelDataSetup()  {
+        DiseaseLibTableView.delegate = self
+        DiseaseLibTableView.dataSource = self
+    }
+    
     
     func retrieveDiseases(){
-    
-    ref.observe(DataEventType.value, with:{(snapshot) in
         
-        if(snapshot.childrenCount>0){
-            self.diseaseList.removeAll()
+        ref.observe(DataEventType.value, with:{(snapshot) in
             
-            for diseases in snapshot.children.allObjects as![DataSnapshot]{
-                let userObject = diseases.value as? [String:AnyObject]
-                let diseasename = userObject?["diseasename"]
+            if(snapshot.childrenCount>0){
+                self.diseaseList.removeAll()
                 
+                for diseases in snapshot.children.allObjects as![DataSnapshot]{
+                    let userObject = diseases.value as? [String:AnyObject]
+                    let diseasename = userObject?["diseasename"] as? String ?? ""
+                    let lowerMargin = userObject?["lowerMargin"] as? Double ?? 0
+                    let higherMargin = userObject?["higherMargin"] as? Double ?? 0
+                    
+                    self.diseaseList.append(DiseaseList(diseaseName: diseasename, lowerMargin: lowerMargin, higherMargin: higherMargin))
+                }
                 
-             let disease = DiseaseList(diseaseName: diseasename as! String?)
-                self.diseaseList.append(disease)
+                DispatchQueue.main.async {
+                    self.DiseaseLibTableView.reloadData()
+                }
             }
-            
-            self.DiseaseLibTableView.reloadData()
-            
-        }
-    })
-    
+        })
     }
     
     
@@ -69,7 +70,7 @@ class DiseaseLibraryViewController: UIViewController {
         
     }
     
-
+    
 }
 
 
@@ -77,11 +78,11 @@ class DiseaseLibraryViewController: UIViewController {
 extension DiseaseLibraryViewController:UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      print("Tapped")
+        print("Tapped")
         
-      if let VC = self.storyboard?.instantiateViewController(withIdentifier: "DiseaseLibInfoVC") as? DiseaseLibInfoViewController{
-        VC.diseasename = diseaseList[indexPath.row].diseaseName ?? ""
-        self.navigationController?.pushViewController(VC, animated: true)
+        if let VC = self.storyboard?.instantiateViewController(withIdentifier: "DiseaseLibInfoVC") as? DiseaseLibInfoViewController{
+            VC.diseasename = diseaseList[indexPath.row].diseaseName ?? ""
+            self.navigationController?.pushViewController(VC, animated: true)
         }
     }
 }
@@ -96,17 +97,17 @@ extension  DiseaseLibraryViewController: UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           let cell = tableView.dequeueReusableCell(withIdentifier: "DiseaseCell", for: indexPath)
-           
-           
-           var disease:  DiseaseList
-           
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DiseaseCell", for: indexPath)
+        
+        
+        var disease:  DiseaseList
+        
         disease = diseaseList[indexPath.row]
-           
-           cell.textLabel?.text = disease.diseaseName
-           
-           return cell
-       }
+        
+        cell.textLabel?.text = disease.diseaseName
+        
+        return cell
+    }
     
     
     

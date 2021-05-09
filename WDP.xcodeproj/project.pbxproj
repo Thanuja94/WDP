@@ -34,6 +34,12 @@
 		4401E3E4263FA31D0049E591 /* DiseaseLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3E3263FA31D0049E591 /* DiseaseLibraryViewController.swift */; };
 		4401E3E6263FB1860049E591 /* DiseaseLibInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3E5263FB1860049E591 /* DiseaseLibInfoViewController.swift */; };
 		445A01AF264157CA000A82BD /* PredictedDiseaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445A01AE264157CA000A82BD /* PredictedDiseaseViewController.swift */; };
+		A6FC2DD52647ABF000842EDA /* CloudRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FC2DD42647ABF000842EDA /* CloudRequest.swift */; };
+		A6FC2DD72647AC1B00842EDA /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FC2DD62647AC1B00842EDA /* Weather.swift */; };
+		A6FC2DDA2647AC4B00842EDA /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FC2DD92647AC4B00842EDA /* LocationSearchViewController.swift */; };
+		A6FC2DDC2647ACA600842EDA /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FC2DDB2647ACA600842EDA /* WeatherDetailsViewController.swift */; };
+		A6FC2DE12647BA1400842EDA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FC2DE02647BA1400842EDA /* LoadingView.swift */; };
+		A6FC2DE42647E9BB00842EDA /* DiseaseRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FC2DE32647E9BB00842EDA /* DiseaseRatingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +74,12 @@
 		4401E3E3263FA31D0049E591 /* DiseaseLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseLibraryViewController.swift; sourceTree = "<group>"; };
 		4401E3E5263FB1860049E591 /* DiseaseLibInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseLibInfoViewController.swift; sourceTree = "<group>"; };
 		445A01AE264157CA000A82BD /* PredictedDiseaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictedDiseaseViewController.swift; sourceTree = "<group>"; };
+		A6FC2DD42647ABF000842EDA /* CloudRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudRequest.swift; sourceTree = "<group>"; };
+		A6FC2DD62647AC1B00842EDA /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		A6FC2DD92647AC4B00842EDA /* LocationSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
+		A6FC2DDB2647ACA600842EDA /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
+		A6FC2DE02647BA1400842EDA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A6FC2DE32647E9BB00842EDA /* DiseaseRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseRatingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +125,7 @@
 			children = (
 				4401E3D4263D6C270049E591 /* Services */,
 				4401E3B72628FAE30049E591 /* Models */,
-				4401E3B62628FADA0049E591 /* Views */,
+				A6FC2DDF2647B9F500842EDA /* View */,
 				4401E3B52628FACE0049E591 /* Controller */,
 				4401E3B82628FAEE0049E591 /* Utils */,
 				4401E3A12628FA2B0049E591 /* AppDelegate.swift */,
@@ -131,25 +143,22 @@
 		4401E3B52628FACE0049E591 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A6FC2DE22647E99C00842EDA /* Disease Rating */,
+				A6FC2DD82647AC2F00842EDA /* Search */,
 				4401E3E2263F98B80049E591 /* Home */,
 				4401E3E1263F98670049E591 /* Auth */,
 				4401E3C7263795B60049E591 /* Admin */,
 				4401E3CC263960310049E591 /* DiseaseInfoViewController.swift */,
 				445A01AE264157CA000A82BD /* PredictedDiseaseViewController.swift */,
+				A6FC2DDB2647ACA600842EDA /* WeatherDetailsViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		4401E3B62628FADA0049E591 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		4401E3B72628FAE30049E591 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A6FC2DD62647AC1B00842EDA /* Weather.swift */,
 				4401E3D2263D6AC00049E591 /* User.swift */,
 				4401E3D7263D9B310049E591 /* Disease.swift */,
 				4401E3DD263E868A0049E591 /* UserList.swift */,
@@ -182,6 +191,7 @@
 		4401E3D4263D6C270049E591 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A6FC2DD42647ABF000842EDA /* CloudRequest.swift */,
 				4401E3D5263D6C490049E591 /* SharedService.swift */,
 			);
 			path = Services;
@@ -204,6 +214,30 @@
 				4401E3E5263FB1860049E591 /* DiseaseLibInfoViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A6FC2DD82647AC2F00842EDA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A6FC2DD92647AC4B00842EDA /* LocationSearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		A6FC2DDF2647B9F500842EDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6FC2DE02647BA1400842EDA /* LoadingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A6FC2DE22647E99C00842EDA /* Disease Rating */ = {
+			isa = PBXGroup;
+			children = (
+				A6FC2DE32647E9BB00842EDA /* DiseaseRatingViewController.swift */,
+			);
+			path = "Disease Rating";
 			sourceTree = "<group>";
 		};
 		B8E71EB126A4BD821840974E /* Pods */ = {
@@ -331,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6FC2DDC2647ACA600842EDA /* WeatherDetailsViewController.swift in Sources */,
 				4401E3D3263D6AC00049E591 /* User.swift in Sources */,
 				4401E3DA263E28A60049E591 /* UserListViewController.swift in Sources */,
 				4401E3BA262965E60049E591 /* LoginViewController.swift in Sources */,
@@ -338,17 +373,22 @@
 				4401E3A62628FA2B0049E591 /* ViewController.swift in Sources */,
 				4401E3C9263796020049E591 /* AddDiseaseViewController.swift in Sources */,
 				445A01AF264157CA000A82BD /* PredictedDiseaseViewController.swift in Sources */,
+				A6FC2DE12647BA1400842EDA /* LoadingView.swift in Sources */,
 				4401E3E0263EA90A0049E591 /* DiseaseList.swift in Sources */,
 				4401E3A22628FA2B0049E591 /* AppDelegate.swift in Sources */,
 				4401E3E4263FA31D0049E591 /* DiseaseLibraryViewController.swift in Sources */,
 				4401E3A42628FA2B0049E591 /* SceneDelegate.swift in Sources */,
 				4401E3D8263D9B310049E591 /* Disease.swift in Sources */,
+				A6FC2DDA2647AC4B00842EDA /* LocationSearchViewController.swift in Sources */,
 				4401E3CB26392BAE0049E591 /* EditDiseaseViewController.swift in Sources */,
 				4401E3C22630B2550049E591 /* AdminViewController.swift in Sources */,
 				4401E3DE263E868B0049E591 /* UserList.swift in Sources */,
 				4401E3D6263D6C490049E591 /* SharedService.swift in Sources */,
+				A6FC2DD72647AC1B00842EDA /* Weather.swift in Sources */,
 				4401E3DC263E6A140049E591 /* DiseaseListViewController.swift in Sources */,
 				4401E3BE2630B0600049E591 /* SignUpViewController.swift in Sources */,
+				A6FC2DE42647E9BB00842EDA /* DiseaseRatingViewController.swift in Sources */,
+				A6FC2DD52647ABF000842EDA /* CloudRequest.swift in Sources */,
 				4401E3C42636CDCF0049E591 /* Utilities.swift in Sources */,
 				4401E3C02630B0BF0049E591 /* HomeViewController.swift in Sources */,
 				4401E3CD263960310049E591 /* DiseaseInfoViewController.swift in Sources */,
@@ -498,7 +538,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R2VCRC624B;
+				DEVELOPMENT_TEAM = SGWDF4729Q;
 				INFOPLIST_FILE = WDP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,7 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R2VCRC624B;
+				DEVELOPMENT_TEAM = SGWDF4729Q;
 				INFOPLIST_FILE = WDP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

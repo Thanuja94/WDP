@@ -8,9 +8,11 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class DiseaseListViewController: UIViewController {
-
+    
     // MARK: - Properties
     
     @IBOutlet weak var DiseaseListLabel: UILabel!
@@ -19,11 +21,11 @@ class DiseaseListViewController: UIViewController {
     
     let ref = REF_DISEASE
     
-     var diseaseList = [DiseaseList]()
+    var diseaseList = [DiseaseList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tabelDataSetup()
         retrieveDiseases()
         
@@ -31,57 +33,52 @@ class DiseaseListViewController: UIViewController {
     }
     
     // MARK: - Functions
-
+    
     func tabelDataSetup()  {
         DiseaseTableView.delegate = self
         DiseaseTableView.dataSource = self
     }
     
-
+    
     
     func retrieveDiseases(){
-           
-           ref.observe(DataEventType.value, with:{(snapshot) in
-               
-               if(snapshot.childrenCount>0){
-                   self.diseaseList.removeAll()
-                   
-                   for diseases in snapshot.children.allObjects as![DataSnapshot]{
-                       let userObject = diseases.value as? [String:AnyObject]
-                       let diseasename = userObject?["diseasename"]
-                       
-                       
-                    let disease = DiseaseList(diseaseName: diseasename as! String?)
-                       self.diseaseList.append(disease)
-                   }
-                   
-                   self.DiseaseTableView.reloadData()
-                   
-               }
-           })
-           
-           }
-    
-    
-    @IBAction func HandleBack(_ sender: Any) {
         
-        
-        navigationController?.popViewController(animated: true)
-
+        ref.observe(DataEventType.value, with:{(snapshot) in
+            
+            if(snapshot.childrenCount>0){
+                self.diseaseList.removeAll()
+                
+                for diseases in snapshot.children.allObjects as![DataSnapshot]{
+                    let userObject = diseases.value as? [String:AnyObject]
+                    let diseasename = userObject?["diseasename"] as? String ?? ""
+                    let lowerMargin = userObject?["lowerMargin"] as? Double ?? 0
+                    let higherMargin = userObject?["higherMargin"] as? Double ?? 0
+                    
+                    self.diseaseList.append(DiseaseList(diseaseName: diseasename, lowerMargin: lowerMargin, higherMargin: higherMargin))
+                }
+                
+                DispatchQueue.main.async {
+                    self.DiseaseTableView.reloadData()
+                }
+            }
+        })
     }
     
     
+    @IBAction func HandleBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 
 extension DiseaseListViewController:UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      print("Tapped")
+        print("Tapped")
         
-      if let VC = self.storyboard?.instantiateViewController(withIdentifier: "EditDiseaseVC") as? EditDiseaseViewController{
-        VC.diseasename = diseaseList[indexPath.row].diseaseName ?? ""
-        self.navigationController?.pushViewController(VC, animated: true)
+        if let VC = self.storyboard?.instantiateViewController(withIdentifier: "EditDiseaseVC") as? EditDiseaseViewController{
+            VC.diseasename = diseaseList[indexPath.row].diseaseName ?? ""
+            self.navigationController?.pushViewController(VC, animated: true)
         }
     }
 }
@@ -95,17 +92,17 @@ extension  DiseaseListViewController: UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           let cell = tableView.dequeueReusableCell(withIdentifier: "DiseaseCell", for: indexPath)
-           
-           
-           var disease:  DiseaseList
-           
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DiseaseCell", for: indexPath)
+        
+        
+        var disease:  DiseaseList
+        
         disease = diseaseList[indexPath.row]
-           
-           cell.textLabel?.text = disease.diseaseName
-           
-           return cell
-       }
+        
+        cell.textLabel?.text = disease.diseaseName
+        
+        return cell
+    }
     
     
     

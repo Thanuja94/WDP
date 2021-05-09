@@ -12,5 +12,7 @@ target 'WDP' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'GeoFire'
+  pod 'MNkCloudRequest'
+  pod 'Cosmos', '~> 11.0'
   
 end

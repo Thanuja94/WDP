@@ -10,19 +10,13 @@ import Foundation
 
 class DiseaseList {
     
-    let diseaseName: String?
-   
+    let diseaseName: String
+    let lowerMargin: Double
+    let higherMargin: Double
     
-
-    
-    
-    
-    
-    init(diseaseName: String?) {
+    init(diseaseName: String, lowerMargin: Double, higherMargin: Double) {
         self.diseaseName = diseaseName
-        
-       
-       
+        self.lowerMargin = lowerMargin
+        self.higherMargin = higherMargin
     }
-
 }

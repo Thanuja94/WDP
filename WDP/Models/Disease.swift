@@ -13,17 +13,18 @@ struct Disease {
     let diseaseName: String
     let symptoms: String
     let precautions: String
-   
-
+    let lowerMargin: Double
+    let higherMargin: Double
     
     
-        init(diseaseName: String, dictionary: [String: Any]) {
+    
+    
+    init(diseaseName: String, dictionary: [String: Any]) {
         self.diseaseName = dictionary["diseasename"] as? String ?? ""
         self.symptoms = dictionary["symptoms"] as? String ?? ""
         self.precautions = dictionary["precautions"] as? String ?? ""
-       
-       
-       
+        self.lowerMargin = dictionary["lowerMargin"] as? Double ?? 0
+        self.higherMargin = dictionary["higherMargin"] as? Double ?? 0
     }
-
+    
 }
