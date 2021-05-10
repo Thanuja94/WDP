@@ -55,8 +55,10 @@ class WeatherViewController: UIViewController {
                     let diseasename = userObject?["diseasename"] as? String ?? ""
                     let lowerMargin = userObject?["lowerMargin"] as? Double ?? 0
                     let higherMargin = userObject?["higherMargin"] as? Double ?? 0
+                    let ratingValue = userObject?["ratingValue"] as? Double ?? 0
+                    let noOfUsersRate = userObject?["noOfUsersRate"] as? Double ?? 0
                     
-                    self.diseaseList.append(DiseaseList(diseaseName: diseasename, lowerMargin: lowerMargin, higherMargin: higherMargin))
+                    self.diseaseList.append(DiseaseList(diseaseName: diseasename, lowerMargin: lowerMargin, higherMargin: higherMargin, ratingValue: ratingValue, noOfUsersRate: noOfUsersRate))
                 }
                 self.diseaseList = self.diseaseList.filter { tempretureValue >= $0.lowerMargin && tempretureValue <= $0.higherMargin }
                 
@@ -87,7 +89,7 @@ extension WeatherViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let VC = self.storyboard?.instantiateViewController(withIdentifier: "DiseaseInfoVC") as? DiseaseInfoViewController {
-            VC.diseasename = diseaseList[indexPath.row].diseaseName
+            VC.diseaseData = diseaseList[indexPath.item]
             self.navigationController?.pushViewController(VC, animated: true)
         }
     }

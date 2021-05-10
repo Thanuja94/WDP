@@ -16,19 +16,15 @@ struct User {
     let email: String
     let uid: String
     let role: String
-
+    let occupation: String
     
-    
-    
-    
-        init(uid: String, dictionary: [String: Any]) {
+    init(uid: String, dictionary: [String: Any]) {
         self.uid = uid 
         self.firstName = dictionary["firstname"] as? String ?? ""
         self.lastName = dictionary["lastname"] as? String ?? ""
         self.email = dictionary["email"] as? String ?? ""
         self.role = dictionary["role"] as? String ?? ""
-       
-       
+        self.occupation = dictionary["occuption"] as? String ?? ""
     }
-
+    
 }

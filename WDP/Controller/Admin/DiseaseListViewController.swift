@@ -53,8 +53,10 @@ class DiseaseListViewController: UIViewController {
                     let diseasename = userObject?["diseasename"] as? String ?? ""
                     let lowerMargin = userObject?["lowerMargin"] as? Double ?? 0
                     let higherMargin = userObject?["higherMargin"] as? Double ?? 0
+                    let ratingValue = userObject?["ratingValue"] as? Double ?? 0
+                    let noOfUsersRate = userObject?["noOfUsersRate"] as? Double ?? 0
                     
-                    self.diseaseList.append(DiseaseList(diseaseName: diseasename, lowerMargin: lowerMargin, higherMargin: higherMargin))
+                    self.diseaseList.append(DiseaseList(diseaseName: diseasename, lowerMargin: lowerMargin, higherMargin: higherMargin, ratingValue: ratingValue, noOfUsersRate: noOfUsersRate))
                 }
                 
                 DispatchQueue.main.async {

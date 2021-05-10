@@ -27,7 +27,7 @@ class DiseaseInfoViewController: UIViewController {
     
     @IBOutlet weak var backButton: UIButton!
     
-    var diseasename = ""
+    var diseaseData: DiseaseList!
     
     // MARK: - Lifecycale
     override func viewDidLoad() {
@@ -52,12 +52,12 @@ class DiseaseInfoViewController: UIViewController {
     
     @IBAction func ratingButtonTapped(_ sender: Any) {
         let newView = self.storyboard?.instantiateViewController(withIdentifier: "DiseaseRatingVC") as! DiseaseRatingViewController
-        newView.diseasename = Diseaselabel.text ?? ""
+        newView.diseaseData = diseaseData
         self.navigationController?.pushViewController(newView, animated: true)
     }
     
     func showDiseaseDetails()  {
-        Service.shared.fetchDiseaseData(diseaseName: diseasename ){(disease)in
+        Service.shared.fetchDiseaseData(diseaseName: diseaseData.diseaseName ){(disease)in
             self.Diseaselabel.text = disease.diseaseName
             self.SymptomsTextView.text = disease.symptoms
             self.PrecautionTextView.text = disease.precautions

@@ -106,6 +106,11 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(newView, animated: true)
     }
     
+    @IBAction func userProfileButtontapped(_ sender: Any) {
+        let newView = self.storyboard?.instantiateViewController(withIdentifier: "NormalUserProfileVC") as! NormalUserProfileViewController
+        self.navigationController?.pushViewController(newView, animated: true)
+    }
+    
     func showAlert() {
         let alert = UIAlertController(title: "Required Fields!", message: "Please enter all required fields.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))

@@ -34,6 +34,8 @@
 		4401E3E4263FA31D0049E591 /* DiseaseLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3E3263FA31D0049E591 /* DiseaseLibraryViewController.swift */; };
 		4401E3E6263FB1860049E591 /* DiseaseLibInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401E3E5263FB1860049E591 /* DiseaseLibInfoViewController.swift */; };
 		445A01AF264157CA000A82BD /* PredictedDiseaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445A01AE264157CA000A82BD /* PredictedDiseaseViewController.swift */; };
+		A6506C7C264905E9008E2BF4 /* CosmosSettingsObjCBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6506C7B264905E9008E2BF4 /* CosmosSettingsObjCBridge.swift */; };
+		A6506C7E264913A4008E2BF4 /* NormalUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6506C7D264913A4008E2BF4 /* NormalUserProfileViewController.swift */; };
 		A6FC2DD52647ABF000842EDA /* CloudRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FC2DD42647ABF000842EDA /* CloudRequest.swift */; };
 		A6FC2DD72647AC1B00842EDA /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FC2DD62647AC1B00842EDA /* Weather.swift */; };
 		A6FC2DDA2647AC4B00842EDA /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FC2DD92647AC4B00842EDA /* LocationSearchViewController.swift */; };
@@ -74,6 +76,8 @@
 		4401E3E3263FA31D0049E591 /* DiseaseLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseLibraryViewController.swift; sourceTree = "<group>"; };
 		4401E3E5263FB1860049E591 /* DiseaseLibInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseLibInfoViewController.swift; sourceTree = "<group>"; };
 		445A01AE264157CA000A82BD /* PredictedDiseaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictedDiseaseViewController.swift; sourceTree = "<group>"; };
+		A6506C7B264905E9008E2BF4 /* CosmosSettingsObjCBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosSettingsObjCBridge.swift; sourceTree = "<group>"; };
+		A6506C7D264913A4008E2BF4 /* NormalUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalUserProfileViewController.swift; sourceTree = "<group>"; };
 		A6FC2DD42647ABF000842EDA /* CloudRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudRequest.swift; sourceTree = "<group>"; };
 		A6FC2DD62647AC1B00842EDA /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		A6FC2DD92647AC4B00842EDA /* LocationSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		4401E3A02628FA2B0049E591 /* WDP */ = {
 			isa = PBXGroup;
 			children = (
+				A6506C7A264905B4008E2BF4 /* Obj-c Bridge */,
 				4401E3D4263D6C270049E591 /* Services */,
 				4401E3B72628FAE30049E591 /* Models */,
 				A6FC2DDF2647B9F500842EDA /* View */,
@@ -202,6 +207,7 @@
 			children = (
 				4401E3BD2630B0600049E591 /* SignUpViewController.swift */,
 				4401E3B9262965E60049E591 /* LoginViewController.swift */,
+				A6506C7D264913A4008E2BF4 /* NormalUserProfileViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -214,6 +220,14 @@
 				4401E3E5263FB1860049E591 /* DiseaseLibInfoViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A6506C7A264905B4008E2BF4 /* Obj-c Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				A6506C7B264905E9008E2BF4 /* CosmosSettingsObjCBridge.swift */,
+			);
+			path = "Obj-c Bridge";
 			sourceTree = "<group>";
 		};
 		A6FC2DD82647AC2F00842EDA /* Search */ = {
@@ -372,6 +386,7 @@
 				4401E3E6263FB1860049E591 /* DiseaseLibInfoViewController.swift in Sources */,
 				4401E3A62628FA2B0049E591 /* ViewController.swift in Sources */,
 				4401E3C9263796020049E591 /* AddDiseaseViewController.swift in Sources */,
+				A6506C7E264913A4008E2BF4 /* NormalUserProfileViewController.swift in Sources */,
 				445A01AF264157CA000A82BD /* PredictedDiseaseViewController.swift in Sources */,
 				A6FC2DE12647BA1400842EDA /* LoadingView.swift in Sources */,
 				4401E3E0263EA90A0049E591 /* DiseaseList.swift in Sources */,
@@ -386,6 +401,7 @@
 				4401E3D6263D6C490049E591 /* SharedService.swift in Sources */,
 				A6FC2DD72647AC1B00842EDA /* Weather.swift in Sources */,
 				4401E3DC263E6A140049E591 /* DiseaseListViewController.swift in Sources */,
+				A6506C7C264905E9008E2BF4 /* CosmosSettingsObjCBridge.swift in Sources */,
 				4401E3BE2630B0600049E591 /* SignUpViewController.swift in Sources */,
 				A6FC2DE42647E9BB00842EDA /* DiseaseRatingViewController.swift in Sources */,
 				A6FC2DD52647ABF000842EDA /* CloudRequest.swift in Sources */,

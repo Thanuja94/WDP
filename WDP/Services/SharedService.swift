@@ -45,4 +45,15 @@ struct Service {
             completion(disease)
        }
    }
+    
+    func logOut(completion: @escaping(Bool) -> Void) {
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+            completion(true)
+        } catch let signOutError as NSError {
+            completion(false)
+          print ("Error signing out: %@", signOutError)
+        }
+    }
 }

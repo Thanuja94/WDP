@@ -15,6 +15,8 @@ struct Disease {
     let precautions: String
     let lowerMargin: Double
     let higherMargin: Double
+    let ratingValue: Double
+    let noOfUsersRate: Double
     
     
     
@@ -25,6 +27,8 @@ struct Disease {
         self.precautions = dictionary["precautions"] as? String ?? ""
         self.lowerMargin = dictionary["lowerMargin"] as? Double ?? 0
         self.higherMargin = dictionary["higherMargin"] as? Double ?? 0
+        self.ratingValue = dictionary["ratingValue"] as? Double ?? 0
+        self.noOfUsersRate = dictionary["noOfUsersRate"] as? Double ?? 0
     }
     
 }

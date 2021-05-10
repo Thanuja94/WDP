@@ -13,10 +13,14 @@ class DiseaseList {
     let diseaseName: String
     let lowerMargin: Double
     let higherMargin: Double
+    let ratingValue: Double
+    let noOfUsersRate: Double
     
-    init(diseaseName: String, lowerMargin: Double, higherMargin: Double) {
+    init(diseaseName: String, lowerMargin: Double, higherMargin: Double, ratingValue: Double, noOfUsersRate: Double) {
         self.diseaseName = diseaseName
         self.lowerMargin = lowerMargin
         self.higherMargin = higherMargin
+        self.ratingValue = ratingValue
+        self.noOfUsersRate = noOfUsersRate
     }
 }
