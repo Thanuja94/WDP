@@ -41,6 +41,7 @@ class LoginViewController: UIViewController {
     func setupUI()   {
         Utilities.filledButton(button: SignInButton)
         Utilities.filledButton(button: NeedAccButton)
+        PasswordTextField.isSecureTextEntry = true
     }
     
     

@@ -22,6 +22,9 @@ class AdminUserProfileViewController: UIViewController {
     
     @IBOutlet weak var saveChangeButton: UIButton!
     
+    @IBOutlet weak var BackButton: UIButton!
+    
+    
     internal lazy var loading: LoadingView = {
         let lv = LoadingView(frame: self.view.bounds)
         return lv
@@ -86,4 +89,12 @@ class AdminUserProfileViewController: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func HandleBack(_ sender: Any) {
+        
+        navigationController?.popViewController(animated: true)
+
+    }
+    
 }
