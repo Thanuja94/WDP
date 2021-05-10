@@ -8,10 +8,10 @@
 
 import UIKit
 
-class EditDiseaseViewController: UIViewController {
+class EditDiseaseViewController: UIViewController, FireAuthAccesable {
     
     // MARK: - Properties
-
+    
     @IBOutlet weak var DiseaseNameLabel: UILabel!
     
     
@@ -40,7 +40,7 @@ class EditDiseaseViewController: UIViewController {
     // MARK: - Lifecycale
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         setupUI()
         //DiseaseNameTextField.text = diseasename
@@ -69,25 +69,21 @@ class EditDiseaseViewController: UIViewController {
     @IBAction func HandleBack(_ sender: Any) {
         
         navigationController?.popViewController(animated: true)
-
+        
     }
     
     func setupUI()   {
         Utilities.filledButton(button: DeleteDiseaseButton)
         Utilities.filledButton(button: SaveChangesButton)
-         
+        
     }
     
     
     func showDiseaseDetails()  {
-        Service.shared.fetchDiseaseData(diseaseName: diseasename ){(disease)in
-
-            self.DiseaseNameTextField.text = disease.diseaseName
-            self.SymptomTextView.text = disease.symptoms
-            self.PrecautionTextView.text = disease.precautions
-        
-         
-         
+        fetchDiseaseData(diseaseName: diseasename) { [weak self] disease in
+            self?.DiseaseNameTextField.text = disease.diseaseName
+            self?.SymptomTextView.text = disease.symptoms
+            self?.PrecautionTextView.text = disease.precautions
         }
     }
     
@@ -95,36 +91,31 @@ class EditDiseaseViewController: UIViewController {
     func saveChangeData()  {
         guard
             let name = DiseaseNameTextField.text,
-                                let symptoms = SymptomTextView.text,
-                                let precautions = PrecautionTextView.text else {
-                                    
-                                    return
-                                    
+            let symptoms = SymptomTextView.text,
+            let precautions = PrecautionTextView.text else {
+            
+            return
+            
         }
         
         let values = [
-              "diseasename": name,
-              "symptoms": symptoms,
-              "precautions": precautions
-              
-              ] as [String : Any]
+            "diseasename": name,
+            "symptoms": symptoms,
+            "precautions": precautions
+            
+        ] as [String : Any]
         
         
         
         
         REF_DISEASE.child(name).updateChildValues(values){ (error, ref) in
-               
-               print("DEBUG: Upadate successfully ")
-               
-               
-               if let error = error {
-                                        print("DEBUG: failto save \(error)")
-                                        return
-                                    }
-               
-              
-               
-           }
+            
+            print("DEBUG: Upadate successfully ")
+            if let error = error {
+                print("DEBUG: failto save \(error)")
+                return
+            }
+        }
         
     }
 }

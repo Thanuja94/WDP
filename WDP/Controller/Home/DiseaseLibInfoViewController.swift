@@ -8,8 +8,8 @@
 
 import UIKit
 
-class DiseaseLibInfoViewController: UIViewController {
-
+class DiseaseLibInfoViewController: UIViewController, FireAuthAccesable {
+    
     
     // MARK: - Properties
     @IBOutlet weak var DiseasenameLabel: UILabel!
@@ -34,34 +34,26 @@ class DiseaseLibInfoViewController: UIViewController {
     
     
     
-     // MARK: - Lifecycale
+    // MARK: - Lifecycale
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         showDiseaseDetails()
     }
     
     // MARK: - Functions
     func showDiseaseDetails()  {
-           Service.shared.fetchDiseaseData(diseaseName: diseasename ){(disease)in
-
-               self.DiseasenameLabel.text = disease.diseaseName
-               self.SymptomTextView.text = disease.symptoms
-               self.PrecautionTextView.text = disease.precautions
-           
-            
-            
-           }
-       }
-    
-    
+        
+        fetchDiseaseData(diseaseName: diseasename) { [weak self] disease in
+            self?.DiseasenameLabel.text = disease.diseaseName
+            self?.SymptomTextView.text = disease.symptoms
+            self?.PrecautionTextView.text = disease.precautions
+        }
+    }
     
     @IBAction func HandleBack(_ sender: Any) {
-        
         navigationController?.popViewController(animated: true)
-        
-        
     }
     
     

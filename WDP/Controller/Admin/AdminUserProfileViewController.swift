@@ -9,7 +9,7 @@
 import UIKit
 import DLRadioButton
 
-class AdminUserProfileViewController: UIViewController {
+class AdminUserProfileViewController: UIViewController, FireAuthAccesable {
     
     // MARK: - Properties
     @IBOutlet weak var ProfileNameLabel: UILabel!
@@ -77,24 +77,22 @@ class AdminUserProfileViewController: UIViewController {
     // MARK: - Functions
     func showProfileDetails()  {
         self.loading.start(in: self.view, withBackground: true)
-        Service.shared.fetchUserData(uid: uid){(user) in
-            self.loading.stop()
-            self.ProfileNameLabel.text = user.firstName + " " + user.lastName
+        fetchUserData(uid: currentUser ?? "") { [weak self] user in
+            self?.loading.stop()
+            self?.ProfileNameLabel.text = user.firstName + " " + user.lastName
             if user.role == "Admin" {
-                self.adminButton.isSelected = true
-                self.normalButton.isSelected = false
+                self?.adminButton.isSelected = true
+                self?.normalButton.isSelected = false
             } else if user.role == "Normal" {
-                self.normalButton.isSelected = true
-                self.adminButton.isSelected = false
+                self?.normalButton.isSelected = true
+                self?.adminButton.isSelected = false
             }
         }
     }
     
     
     @IBAction func HandleBack(_ sender: Any) {
-        
         navigationController?.popViewController(animated: true)
-
     }
     
 }

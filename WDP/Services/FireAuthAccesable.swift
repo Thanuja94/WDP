@@ -16,24 +16,36 @@ let REF_USERS = DB_REF.child("users")
 let REF_DISEASE = DB_REF.child("diseases")
 
 
+protocol FireAuthAccesable {
+    var auth:Auth { get }
+    var currentUser: String? { get }
+}
 
-struct Service {
+extension FireAuthAccesable {
+    var auth: Auth {
+        return Auth.auth()
+    }
     
-    static var shared = Service()
+    var currentUser: String? {
+        return auth.currentUser?.uid
+    }
     
-    var currentUserID = Auth.auth().currentUser?.uid ;
-
-    
+    /*............................
+     Mark:- Sign out from firebase
+     ..................................*/
+    func signOut() throws {
+        try auth.signOut()
+    }
     
     func fetchUserData(uid: String, completion: @escaping(User) -> Void) {
-          REF_USERS.child(uid).observeSingleEvent(of: .value) { (snapshot) in
-              guard let dictionary = snapshot.value as? [String: Any] else { return }
-              let uid = snapshot.key
-              let user = User(uid: uid, dictionary: dictionary)
-             
-              completion(user)
-          }
-      }
+        REF_USERS.child(uid).observeSingleEvent(of: .value) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: Any] else { return }
+            let uid = snapshot.key
+            let user = User(uid: uid, dictionary: dictionary)
+            
+            completion(user)
+        }
+    }
     
     
     func fetchDiseaseData(diseaseName: String, completion: @escaping(Disease) -> Void) {
@@ -41,19 +53,17 @@ struct Service {
             guard let dictionary = snapshot.value as? [String: Any] else { return }
             let diseaseName = snapshot.key
             let disease = Disease(diseaseName: diseaseName, dictionary: dictionary)
-
+            
             completion(disease)
-       }
-   }
+        }
+    }
     
     func logOut(completion: @escaping(Bool) -> Void) {
-        let firebaseAuth = Auth.auth()
         do {
-          try firebaseAuth.signOut()
+            try auth.signOut()
             completion(true)
-        } catch let signOutError as NSError {
+        } catch {
             completion(false)
-          print ("Error signing out: %@", signOutError)
         }
     }
 }

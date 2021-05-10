@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, FireAuthAccesable {
     
     // MARK: - Properties
     @IBOutlet weak var EmalTextField: UITextField!
@@ -60,13 +60,13 @@ class LoginViewController: UIViewController {
                 return
             }
             print("DEBUG: login successfully ")
-            self.checkUserRole()
+            self.checkUserRole(with: result?.user.uid)
         }
     }
     
     
-    func checkUserRole()  {
-        Service.shared.fetchUserData(uid: Service.shared.currentUserID ?? ""){(user) in
+    func checkUserRole(with userId: String?)  {
+        fetchUserData(uid: currentUser ?? "") { user in
             let role = user.role
             if(role == "Normal"){
                 let newView = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController

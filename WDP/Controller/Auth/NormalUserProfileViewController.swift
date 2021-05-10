@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class NormalUserProfileViewController: UIViewController {
+class NormalUserProfileViewController: UIViewController, FireAuthAccesable {
     @IBOutlet weak var fullNameLabel: UILabel!
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -66,7 +66,7 @@ class NormalUserProfileViewController: UIViewController {
                                       "occuption": occupation]
         
         self.loading.start(in: self.view, withBackground: true)
-        REF_USERS.child(Service.shared.currentUserID ?? "").updateChildValues(values){ (error, ref) in
+        REF_USERS.child(currentUser ?? "").updateChildValues(values){ (error, ref) in
             self.loading.stop()
             if let error = error {
                 print("DEBUG: failto save \(error)")
@@ -79,7 +79,7 @@ class NormalUserProfileViewController: UIViewController {
     
     @IBAction func logoutButtonTapped(_ sender: Any) {
         self.loading.start(in: self.view, withBackground: true)
-        Service.shared.logOut { completed in
+        logOut { completed in
             self.loading.stop()
             self.navigationController?.popToRootViewController(animated: true)
         }
@@ -93,9 +93,9 @@ class NormalUserProfileViewController: UIViewController {
     
     func fetchData() {
         self.loading.start(in: self.view, withBackground: true)
-        Service.shared.fetchUserData(uid: Service.shared.currentUserID ?? ""){(user) in
-            self.loading.stop()
-            self.updateUIWithNewData(with: user)
+        fetchUserData(uid: currentUser ?? "") { [weak self] user in
+            self?.loading.stop()
+            self?.updateUIWithNewData(with: user)
         }
     }
     

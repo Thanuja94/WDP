@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DiseaseInfoViewController: UIViewController {
+class DiseaseInfoViewController: UIViewController, FireAuthAccesable {
     
     // MARK: - Properties
     
@@ -57,10 +57,10 @@ class DiseaseInfoViewController: UIViewController {
     }
     
     func showDiseaseDetails()  {
-        Service.shared.fetchDiseaseData(diseaseName: diseaseData.diseaseName ){(disease)in
-            self.Diseaselabel.text = disease.diseaseName
-            self.SymptomsTextView.text = disease.symptoms
-            self.PrecautionTextView.text = disease.precautions
+        fetchDiseaseData(diseaseName: diseaseData.diseaseName) { [weak self] disease in
+            self?.Diseaselabel.text = disease.diseaseName
+            self?.SymptomsTextView.text = disease.symptoms
+            self?.PrecautionTextView.text = disease.precautions
         }
     }
 }

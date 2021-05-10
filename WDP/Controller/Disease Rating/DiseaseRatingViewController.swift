@@ -43,7 +43,11 @@ class DiseaseRatingViewController: UIViewController {
     func updateUIWithNewData(with data: DiseaseList) {
         self.diseaseName.text = data.diseaseName
         self.ratingView.text = String("(\(data.noOfUsersRate))")
-        self.ratingView.rating = (data.ratingValue / data.noOfUsersRate)
+        if data.ratingValue == 0.0 && data.noOfUsersRate == 0.0 {
+            self.ratingView.rating = 0.0
+        } else {
+            self.ratingView.rating = (data.ratingValue / data.noOfUsersRate)
+        }
     }
     
     @IBAction func handleBack(_ sender: Any) {
