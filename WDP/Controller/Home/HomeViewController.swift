@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, FireAuthAccesable {
     
     // MARK: - Properties
     
@@ -27,6 +27,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var ProfileButton: UIButton!
     
+    @IBOutlet weak var backButton: UIButton!
+    
     internal lazy var loading: LoadingView = {
         let lv = LoadingView(frame: self.view.bounds)
         return lv
@@ -36,6 +38,8 @@ class HomeViewController: UIViewController {
     var resultSearchController: UISearchController! = nil
     var selectedPin: MKPlacemark? = nil
     var selectedLocation: CLLocationCoordinate2D!
+    
+    var userRole: String!
     
     // MARK: - Lifecycale
     
@@ -54,6 +58,7 @@ class HomeViewController: UIViewController {
         MapView.showsUserLocation = true
         MapView.userTrackingMode = .follow
         
+        checkUserRole(with: userRole)
     }
     
     
@@ -101,6 +106,10 @@ class HomeViewController: UIViewController {
         
     }
     
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func HandleDiseaseLibrary(_ sender: Any) {
         let newView = self.storyboard?.instantiateViewController(withIdentifier: "DiseaseLibraryVC") as! DiseaseLibraryViewController
         self.navigationController?.pushViewController(newView, animated: true)
@@ -124,6 +133,14 @@ class HomeViewController: UIViewController {
             let newView = self?.storyboard?.instantiateViewController(withIdentifier: "WeatherDetalsVC") as! WeatherViewController
             newView.weatherData = data
             self?.navigationController?.pushViewController(newView, animated: true)
+        }
+    }
+    
+    func checkUserRole(with role: String?)  {
+        if(role == "Normal"){
+            self.backButton.isHidden = true
+        } else if(role == "Admin") {
+            self.backButton.isHidden = false
         }
     }
     
@@ -168,7 +185,7 @@ extension HomeViewController: HandleMapSearch {
         annotation.coordinate = placemark.coordinate
         annotation.title = placemark.name
         if let city = placemark.locality,
-        let state = placemark.administrativeArea {
+           let state = placemark.administrativeArea {
             annotation.subtitle = "\(city) \(state)"
         }
         LocationTextField.text = placemark.name

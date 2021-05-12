@@ -235,6 +235,21 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Norml_backgr" translatesAutoresizingMaskIntoConstraints="NO" id="Rxw-gu-q92">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bir-sS-T4l">
+                                <rect key="frame" x="40" y="68" width="60" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="5j5-2X-d9p"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="darkTextColor"/>
+                                <state key="normal" title="Back" image="arrow.left" catalog="system">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="c7y-QA-KGh" eventType="touchUpInside" id="cD4-Ce-H8H"/>
+                                    <action selector="handleBack:" destination="RJw-SF-HgH" eventType="touchUpInside" id="1Lh-sJ-K3k"/>
+                                    <action selector="handleBack:" destination="uRS-ns-scb" eventType="touchUpInside" id="iwE-LU-So6"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="k3V-Ay-BIU">
                                 <rect key="frame" x="40" y="144" width="334" height="115"/>
                                 <subviews>
@@ -319,6 +334,7 @@
                             <constraint firstItem="pjp-Au-a7U" firstAttribute="bottom" secondItem="Rxw-gu-q92" secondAttribute="bottom" id="2ze-Ql-W7K"/>
                             <constraint firstItem="Rxw-gu-q92" firstAttribute="leading" secondItem="pjp-Au-a7U" secondAttribute="leading" id="8Ls-c7-bfA"/>
                             <constraint firstItem="pjp-Au-a7U" firstAttribute="trailing" secondItem="k3V-Ay-BIU" secondAttribute="trailing" constant="40" id="AO3-If-Ppw"/>
+                            <constraint firstItem="Bir-sS-T4l" firstAttribute="top" secondItem="pjp-Au-a7U" secondAttribute="top" constant="24" id="CLW-LH-2oE"/>
                             <constraint firstItem="eca-QH-sSV" firstAttribute="leading" secondItem="pjp-Au-a7U" secondAttribute="leading" constant="40" id="Cth-wp-8lk"/>
                             <constraint firstItem="k3V-Ay-BIU" firstAttribute="top" secondItem="pjp-Au-a7U" secondAttribute="top" constant="100" id="Ocw-ln-Blk"/>
                             <constraint firstItem="4Nc-vR-a7V" firstAttribute="leading" secondItem="pjp-Au-a7U" secondAttribute="leading" constant="40" id="Wjg-w9-90I"/>
@@ -327,6 +343,7 @@
                             <constraint firstItem="pjp-Au-a7U" firstAttribute="trailing" secondItem="eca-QH-sSV" secondAttribute="trailing" constant="40" id="b4j-Ta-ckx"/>
                             <constraint firstItem="pjp-Au-a7U" firstAttribute="trailing" secondItem="Rxw-gu-q92" secondAttribute="trailing" id="b7Q-8G-2Q2"/>
                             <constraint firstItem="Rxw-gu-q92" firstAttribute="top" secondItem="pjp-Au-a7U" secondAttribute="top" id="bM1-Kz-db4"/>
+                            <constraint firstItem="Bir-sS-T4l" firstAttribute="leading" secondItem="pjp-Au-a7U" secondAttribute="leading" constant="40" id="jZW-Jp-qvM"/>
                             <constraint firstItem="pjp-Au-a7U" firstAttribute="bottom" secondItem="eca-QH-sSV" secondAttribute="bottom" constant="200" id="mHu-MW-pxp"/>
                             <constraint firstItem="k3V-Ay-BIU" firstAttribute="leading" secondItem="pjp-Au-a7U" secondAttribute="leading" constant="40" id="mvi-Qk-gde"/>
                             <constraint firstItem="pjp-Au-a7U" firstAttribute="trailing" secondItem="4Nc-vR-a7V" secondAttribute="trailing" constant="40" id="q3l-gw-e7k"/>
@@ -341,6 +358,7 @@
                         <outlet property="LocationTextField" destination="Suv-8t-ho5" id="XIO-CZ-a1C"/>
                         <outlet property="MapView" destination="eca-QH-sSV" id="wg4-ZL-ozq"/>
                         <outlet property="ProfileButton" destination="dsc-LT-bIl" id="Qae-e2-24r"/>
+                        <outlet property="backButton" destination="Bir-sS-T4l" id="gdc-Jo-2I9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Hr-QJ-otC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1577,7 +1595,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="center" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-rB-l9G" customClass="CosmosView" customModule="Cosmos">
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-rB-l9G" customClass="CosmosView" customModule="Cosmos">
                                 <rect key="frame" x="84.5" y="180" width="245" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -1633,7 +1651,7 @@
                                     <action selector="submitButtonTapped:" destination="aIw-9K-ToC" eventType="touchUpInside" id="X5n-He-Tjj"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Rate this disease how affect you. Your feedback will helpfil for other." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dTc-19-eos">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Rate this disease how affect you. Your feedback will helpfil for other." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dTc-19-eos">
                                 <rect key="frame" x="40" y="275" width="334" height="155"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1850,6 +1868,11 @@
             <point key="canvasLocation" x="4826" y="-788"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="sB2-rB-l9G">
+            <size key="intrinsicContentSize" width="245" height="45"/>
+        </designable>
+    </designables>
     <resources>
         <image name="LoginScr_Backgr" width="206" height="449"/>
         <image name="Norml_backgr" width="144" height="313"/>

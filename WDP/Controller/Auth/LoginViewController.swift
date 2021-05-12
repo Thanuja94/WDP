@@ -66,14 +66,18 @@ class LoginViewController: UIViewController, FireAuthAccesable {
     
     
     func checkUserRole(with userId: String?)  {
+        self.loading.start(in: self.view, withBackground: true)
         fetchUserData(uid: currentUser ?? "") { user in
+            self.loading.stop()
             let role = user.role
             if(role == "Normal"){
                 let newView = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+                newView.userRole = role
                 self.navigationController?.pushViewController(newView, animated: true)
             }
             if (role == "Admin") {
                 let newView = self.storyboard?.instantiateViewController(withIdentifier: "AdminVC") as! AdminViewController
+                newView.userRole = role
                 self.navigationController?.pushViewController(newView, animated: true)
             }
         }

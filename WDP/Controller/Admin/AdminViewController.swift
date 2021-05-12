@@ -34,6 +34,8 @@ class AdminViewController: UIViewController, FireAuthAccesable {
         return lv
     }()
     
+    var userRole: String!
+    
     // MARK: - Lifecycale
     
     
@@ -67,10 +69,9 @@ class AdminViewController: UIViewController, FireAuthAccesable {
     
     
     @IBAction func HandleViewHomePage(_ sender: Any) {
-        
         let newView = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+        newView.userRole = userRole
         self.navigationController?.pushViewController(newView, animated: true)
-        
     }
     
     

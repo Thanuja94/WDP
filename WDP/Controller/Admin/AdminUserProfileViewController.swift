@@ -77,7 +77,7 @@ class AdminUserProfileViewController: UIViewController, FireAuthAccesable {
     // MARK: - Functions
     func showProfileDetails()  {
         self.loading.start(in: self.view, withBackground: true)
-        fetchUserData(uid: currentUser ?? "") { [weak self] user in
+        fetchUserData(uid: uid) { [weak self] user in
             self?.loading.stop()
             self?.ProfileNameLabel.text = user.firstName + " " + user.lastName
             if user.role == "Admin" {
